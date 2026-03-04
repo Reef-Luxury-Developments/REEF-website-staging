@@ -1,0 +1,98 @@
+.arrow-split-fill {
+  position: relative;
+  display: inline-block;
+  color: #cbd5e1; 
+  overflow: hidden;
+}
+
+.arrow-split-fill::after {
+  content: '↗';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  color: #40C2CC; 
+  transition: top 0.5s ease-in-out;
+}
+
+.group:hover .arrow-split-fill::after {
+  top: 0;
+}
+
+a.group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(10,24,26,0.80);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a.group:hover {
+  color: #40C2CC;
+  transform: translateX(4px);
+}
+
+a.group::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #40C2CC;
+  transition: width 0.3s ease;
+}
+
+a.group:hover::before {
+  width: 16px; 
+}
+
+
+/* Input Animation */
+.custom-input {
+  border: none;
+  outline: none;
+  transition: all 1.5s ease;
+  caret-color: #0A181A;
+  width: 100%;
+}
+
+.custom-input:hover {
+  animation: border-bottom-fade 1.5s forwards;
+}
+
+.custom-input:focus {
+  animation: border-bottom-fade 1s forwards;
+  animation-delay: 1.5s;
+}
+
+
+.input-wrapper {
+  border-bottom: 1.5px solid #ccc;
+  transition: all 0.5s ease;
+}
+
+.input-wrapper:hover,
+.input-wrapper:focus-within {
+  border-bottom: 2.3px solid #aaa;
+}
+@keyframes border-bottom-fade {
+  0% {
+    border-bottom-color: #ccc;
+    border-bottom-width: 1.5px;
+  }
+  100% {
+    border-bottom-color: #aaa;
+    border-bottom-width: 2.3px;
+  }
+}
+
+/* Arrow Button Animation */
+.arrow-btn {
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn:hover {
+  transform: translateX(6px);
+}

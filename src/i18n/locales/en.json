@@ -1,0 +1,1127 @@
+{
+  "menu": {
+    "home": "home",
+    "projects": "projects",
+    "communities": "communities",
+    "ourStory": "our story",
+    "labelText": "label text",
+    "contact": "contact us",
+    "faq": "FAQ's",
+    "media_center": "media center"
+  },
+  "home": {
+    "projectsSlider": {
+      "title": "Our Projects"
+    }
+  },
+  "about": {
+    "Get_in_touch": "Contact Us",
+    "Toptext": "REEF is pioneering a new era of real estate in Dubai, blending patented innovation with timeless design to transform living spaces into lasting legacies.",
+    "OurStory": "Our \n Story",
+    "RightimagetextH1": "Innovating Today to Shape\nTomorrow’s Living.",
+    "RightimagetextP1": "The future of luxury living unfolds through our patented Outdoor-Cooled Sunken Balcony and Winter Garden. By transforming unused outdoor spaces and enhancing them with integrated cooling technology, REEF redefines the possibilities of luxury real estate in the region. \n With every project, we’re setting new standards for quality comfort, and innovation in Dubai’s evolving landscape. ",
+    "blockquote": "\u201cWE BELIEVE THAT TRUE LUXURY IS MEASURED NOT ONLY BY AESTHETICS, BUT\nBY HOW A SPACE ENHANCES EVERYDAY LIFE\u201d",
+    "ceo": "CEO & Co-Founder",
+    "name": "SAMER AMBAR",
+    "MissionVisionTitle": "MISSION & VISION",
+    "ContactUs": "Contact US",
+    "mission": "mission",
+    "MissionVisionText": "Transforming everyday life by integrating innovative and\nseamless design into every home we build by setting the highest\nstandard of living.",
+    "vision": "vision",
+    "visionText": "To shape future communities that stand as symbols of innovation, convenience, and timeless designs.",
+    "PRIORITYPILLARS": "PRIORITY PILLARS",
+    "PillarsList": [
+      {
+        "number": "01",
+        "title": "Customer First Mindset",
+        "description": "Our customers are at the heart of every decision we make – from selecting strategic locations, to planning layouts, to choosing luxury finishes, through to the final handover with excellence."
+      },
+      {
+        "number": "02",
+        "title": "Elevate Daily Living",
+        "description": "We go beyond luxury aesthetics to offer smarter spaces that improve comfort, efficiency, and well-being—like our patented Climate-Controlled Sunken Balconies."
+      },
+      {
+        "number": "03",
+        "title": "Drive Growth & Returns",
+        "description": "Every REEF project is designed to maximize the investment potential—ensuring that every square foot of your home delivers real value, while contributing to Dubai's long-term urban vision."
+      },
+      {
+        "number": "04",
+        "title": "Build With Expertise",
+        "description": "Our success is built on the experience of a talented team and trusted partners—bringing precision, creativity, and excellence to every stage of development, from concept to completion."
+      }
+    ],
+    "content": "Content",
+    "newsandblogs": "NEWS & BLOGS",
+    "journal": " THE REEF JOURNAL",
+    "journalText": "Explore the latest updates, innovations, and stories from REEF.\nStay connected to the future of luxury living.",
+    "exploreAll": "  Explore All",
+    "news": "NEWS",
+    "date": "30 MAY 2025",
+    "articleh3": "The Rise of Climate-\nControlled Outdoor Living",
+    "rightarticleh3": "Redefining Luxury: What\nMakes a Home Truly Elegant"
+  },
+  "blogs": {
+    "title": "INNOVATION IN REAL ESTATE",
+    "maintitle": "THE RISE OF CLIMATE-CONTROLLED",
+    "articlecontent": "As global temperatures continue to climb and urban living becomes more compact, the definition of luxury is rapidly evolving. No longer is it just about expansive interiors and opulent materials—today, true luxury means the freedom to enjoy your home in all its spaces, all year round. At REEF Luxury Developments, we've taken this vision a step further with the introduction of our patented Climate-Controlled Sunken Balcony and Winter Garden concept—the world's first of its kind.",
+    "sections": [
+      {
+        "title": "A Breakthrough in Residential Design",
+        "paragraphs": [
+          "Traditional balconies in hot climates like Dubai often go unused for much of the year due to extreme heat and sun exposure. Our innovative solution transforms the outdoor living experience by introducing climate control to these external spaces. This revolutionary concept integrates advanced cooling systems, natural shading, and smart air circulation into beautifully designed sunken balconies and winter gardens—ensuring comfort even in peak summer months."
+        ]
+      },
+      {
+        "title": "A Global First: Engineered for the Desert,\nDesigned for the World",
+        "paragraphs": [
+          "This groundbreaking feature isn't just a design novelty; it's a lifestyle upgrade. It allows residents to enjoy their outdoor areas year-round—hosting guests, practicing yoga, enjoying a meal, or simply unwinding in a personal oasis. The design reduces direct exposure to heat and dust while maintaining seamless aesthetic integration with the home's architecture."
+        ]
+      },
+      {
+        "title": "Innovation That Drives Value",
+        "paragraphs": [
+          "At REEF, innovation is never for novelty's sake—it's a strategic choice that delivers real-world benefits. Our climate-controlled outdoor living concept enhances:"
+        ]
+      }
+    ],
+    "listItems": [
+      {
+        "title": "Usability",
+        "description": "Extending the liveable area of the home."
+      },
+      {
+        "title": "Health & Wellbeing",
+        "description": "Encouraging more time spent in nature-rich environments."
+      },
+      {
+        "title": "Sustainability",
+        "description": "Reducing the need for high-energy indoor air-conditioning by balancing interior and exterior temperatures."
+      },
+      {
+        "title": "Investment Value",
+        "description": "Unique features that elevate long-term property appeal and rental potential."
+      }
+    ],
+    "additionalParagraphs": [
+      "Aligned with Dubai's 2030 Vision and HH Sheikh Mohammed bin Rashid Al Maktoum's mission to position Dubai as a leader in innovation and sustainability, this concept represents our contribution to shaping the city's future—where luxury and liveability co-exist."
+    ],
+    "additionalParagraphs1": [
+      "We're not just building homes; we're redefining what a home can be\nin the modern world."
+    ],
+    "additionalParagraphs2": [
+      "It's not just about function—it's about emotional value. These spaces are an extension of the living area, offering peace, serenity, and connection with nature, even in a high-rise environment."
+    ],
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter"
+  },
+  "Luxuryhero": {
+    "text": "READY TO EXPERIENCE THE NEXT GENERATION OF LUXURY LIVING?"
+  },
+  "faq": {
+    "title": "FAQ title text here",
+    "Q": "frequently asked \n  questions",
+    "Qtitle": "Didn’t find what you’re looking for? ",
+    "text": "We’re here to help.",
+    "all": "cannot find what you are looking for",
+    "Contracts": "Contracts",
+    "Mortgages": "Mortgages",
+    "Preferred": "Preferred Access",
+    "Property": "Property",
+    "PropertyAlterations": "Property Alterations and home improvments",
+    "Registration": "Registration and transfer",
+    "Succession": "Succession"
+  },
+  "media": {
+    "title": "Live the Future:\nreef news & blogs",
+    "mainarticletext": "Innovation in Real Estate",
+    "Article1": "The Rise of Climate-\nControlled Outdoor Living",
+    "Article2": "Exploring REEF’s patented Sunken Balcony and Winter Garden with\noutdoor cooling – a global first.",
+    "read": "read article",
+    "load": "load more",
+    "articles": [
+      {
+        "img": "/assets/about2.png",
+        "alt": "Modern Cityscape",
+        "category": "NEWS",
+        "date": "30 MAY 2025",
+        "title": "The Rise of Climate-Controlled Outdoor Living"
+      },
+      {
+        "img": "/assets/about1.jpg",
+        "alt": "Luxury Interior",
+        "category": "NEWS",
+        "date": "30 MAY 2025",
+        "title": "Redefining Luxury: What Makes a Home Truly Elegant"
+      }
+    ]
+  },
+  "ProjectDetails": {
+    "Reef": "REEF 998",
+    "Reeftext": "REEF 998 redefines city living with the exclusive Sunken Balcony concept, featuring outdoor cooling and blending nature, comfort, and innovation.",
+    "Location": "Location",
+    "year": "Completion Year",
+    "Bedrooms": "Bedrooms",
+    "BHK": "Bedroom",
+    "NoResidences": "No. Residences",
+    "Unit": "Units",
+    "maincontenttext1": "REEF 998 redefines city living with the exclusive Sunken Balcony",
+    "maincontenttext2": "Concept with outdoor cooling, blending nature, comfort, and innovation."
+  },
+  "ProjectDetailsAll": {
+    "title": "TIMELESS DESIGN.\n MODERN INNOVATION",
+    "description": "A showcase of REEF’s signature developments—designed with innovation, elegance, and purpose. Each project reflects our vision for timeless living and future-ready communities.",
+    "LoadMore": "Load More",
+    "GeneralFaq": "General faq",
+    "generalFaqText": "Everything you need to know about our projects and how it works. Can’t find your answer?",
+    "Apartment": "Apartment",
+    "Townhouse": "Townhouse"
+  },
+  "project": [
+    {
+      "name": "REEF 999",
+      "image": "/assets/pr1.png",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment",
+      "handover": "Q2 2027"
+    },
+    {
+      "name": "REEF 1000",
+      "image": "/assets/pr2.jpg",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment",
+      "handover": "Q1 2026"
+    },
+    {
+      "name": "REEF 998",
+      "image": "/assets/pr3.jpg",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment",
+      "handover": "Q2 2026"
+    }
+  ],
+  "slider": {
+    "projectdetails": "View Project Details",
+    "text": "REEF provides a diverse of prestigious amenities across its communities: fitness centers, pools, leisure spaces, padel courts, outdoor cinema, co-working spaces, landscaped gardens, and generous open areas for outdoor activities and relaxation.",
+    "choice": "Your Private Resort",
+    "Amenities": "Project Amenities",
+    "project_location": "PROJECT LOCATION"
+  },
+  "distination": {
+    "text": "COMMUNITIES",
+    "alfurjan": "AL FURJAN",
+    "DLRC": "DLRC",
+    "DUBAIISLAND": "DUBAI ISLANDS",
+    "IMPZ": "DUBAI PRODUCTION CITY"
+  },
+  "foot": {
+    "Communities": "Communities",
+    "leftsectiontext": "join our newsletter to recieve \n latest projects and content",
+    "imagetext": "by signing up to recieve emails from reef luxury developement ypu agree to our",
+    "privacy": "Privacy Policy",
+    "privacytext": "We treat your info responsibly. Unsubscribe anytime.",
+    "Navigation": "Navigation",
+    "Projects": "Projects",
+    "Social": "Social",
+    "ChannelPartner": "Become a Channel Partner",
+    "Home": "Home",
+    "Project": "Projects",
+    "About": "About",
+    "Blogs": "Blogs",
+    "News": "News",
+    "Contact": "Contact Us",
+    "FAQ": "FAQs",
+    "bottom": {
+      "privacyPolicy": "PRIVACY POLICY",
+      "terms": "TERMS",
+      "cookiePolicy": "COOKIE POLICY",
+      "sitemap": "SITEMAP",
+      "copyright": " REEF LUXURY DEVELOPMENTS. ALL RIGHTS RESERVED."
+    },
+    "card": {
+      "altTopDecoration": "Top decoration",
+      "altArrowIcon": "Arrow Icon",
+      "altHoverArrowIcon": "Hover Arrow Icon"
+    },
+    "statCard": {
+      "channelPartner": {
+        "label": "CHANNEL PARTNER",
+        "hover1": "BECOME",
+        "hover2": "PARTNER"
+      },
+      "employee": {
+        "label": "EMPLOYEE",
+        "hover1": "JOIN TO",
+        "hover2": "OUR TEAM"
+      }
+    },
+    "socialLinks": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tiktok": "TikTok",
+      "linkedin": "LinkedIn",
+      "x": "X (Twitter)",
+      "snapchat": "Snapchat",
+      "youtube": "Youtube"
+    },
+    "channelPartner": {
+      "uaeIndivisual": "UAE Individual",
+      "uaeAgency": "UAE Agency",
+      "InternationIndivisual": "International Agency",
+      "InternationAgency": "International Individual"
+    }
+  },
+  "latestslider": {
+    "header": "Discover Our \n Latest Projects"
+  },
+  "map": {
+    "header": "Dubai Land Residences Complex (DLRC) is gaining"
+  },
+  "common": {
+    "close": "Close",
+    "all": "All",
+    "communityNotFound": "Community Not Found",
+    "communityNotFoundDesc": "The community you're looking for doesn't exist or has been removed.",
+    "backToCommunities": "Back to Communities",
+    "projects": "Projects",
+    "readLess": "Hide",
+    "readMore": "Read More",
+    "minutes": "Mins"
+  },
+  "communities": {
+    "title": "Communities",
+    "description": "At REEF Luxury Developments, exceptional living begins with clear vision and strategic planning. We select future-ready communities defined by strong rental yields, resale value, connectivity, and long-term investment potential, guided by deep market insight and evolving resident needs, creating locations where daily life is elevated, and long-term value continues to grow.",
+    "viewCommunity": "View Community"
+  },
+  "communityDetails": {
+    "locationTitle": "Prime Location & Connectivity",
+    "uniquenessTitle": "What Makes This Community Unique?",
+    "ctaTitle": "Find Your Dream Home",
+    "ctaDescription": "A community defined by convenience, value, and long-term growth.",
+    "projectsTitle": "Our Projects in",
+    "noProjects": "No projects found for this community.",
+    "landmarksListTitle": "Minutes Away From Major destinations Such As"
+  },
+  "projectdetailsimage": {
+    "header": "Your outdoor space. A serene retreat, every season.",
+    "text": "Embrace the next generation of outdoor living with the world's first climate-controlled Sunken Balcony and Winter Garden. At REEF, balconies are no longer an afterthought; they are a bold innovation and a seamless extension of your home, that invites you to enjoy the outdoors all year round, even in the heart of summer."
+  },
+  "hover": {
+    "hoverH1": "more than investment\n it is a life \nstyle reimagined",
+    "hoverP": "Our commitment to excellence ensures high-quality, elegant homes that integrate thoughtful practices and timeless design. We create vibrant, connected communities that offer exceptional value."
+  },
+  "stideo": {
+    "UNITSIZE": "UNIT SIZE",
+    "number": "412–478",
+    "SQFT": "SQ FT",
+    "Studio": "Studio",
+    "oneBedroom": "1 Bedroom",
+    "twoRooms": "2 Bedrooms",
+    "threeRooms": "3 Bedrooms",
+    "fourRooms": "4 Bedrooms",
+    "fiveRooms": "5 Bedrooms",
+    "sixRooms": "6 Bedrooms",
+    "sevenRooms": "7 Bedrooms",
+    "eightRooms": "8 Bedrooms",
+    "nineRooms": "9 Bedrooms",
+    "tenRooms": "10 Bedrooms"
+  },
+  "BHK": {
+    "oneBedroom": "1 Bedroom",
+    "twoRooms": "2 Bedroom",
+    "BHK": "Bedroom"
+  },
+  "Container": {
+    "Text": "Through our groundbreaking patented Outdoor-Cooled Sunken Balcony and Winter Garden, we transcend conventional design limitations to craft living experiences that elevate everyday moments."
+  },
+  "heroSection": {
+    "Reef": "REEF LUXURY \n DEVELOPMENTS",
+    "ReefText": "World’s First Patented Outdoor-Cooled Sunken Balcony"
+  },
+  "brand": {
+    "line1": "Feel the Luxury",
+    "line2": "Live The Innovation"
+  },
+  "latestproject": {
+    "text": "Latest Projects",
+    "project": "projects",
+    "date": "       Sep 2026",
+    "Handover": "  Handover"
+  },
+  "Navbar": {
+    "menu": "Menu",
+    "langArabic": "العربية",
+    "langEnglish": "English",
+    "register": "Register Interest"
+  },
+  "hero": {
+    "title": "REEF\nLuxury Developments",
+    "subtitle": "The world’s first patented sunken balcony with climate control"
+  },
+  "register": {
+    "overtitle": "Because the luxury you imagined is ready to be lived.",
+    "title": "CALL US NOW",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "emailOptional": "Email (Optional)",
+    "countryCode": "Country code",
+    "submit": "Submit Request",
+    "terms": "Terms",
+    "privacy": "Privacy Policy",
+    "consent": "By submitting, you agree to our",
+    "and": "and",
+    "submitting": "Submitting...",
+    "success": "Submitted successfully",
+    "failure": "Submission failed",
+    "text1": "Because the luxury you imagined is ready now.",
+    "text2": "Register your Interest",
+    "term": "term and"
+  },
+  "contact": {
+    "title": "CONTACT US",
+    "bgAlt": "Contact hero background",
+    "visitOffice": "VISIT OUR OFFICES",
+    "viewOnMap": "View on map",
+    "officeLocations": {
+      "address1": "Unit 401/402, Ibn Battuta Gate Office Complex Building, Dubai, UAE.",
+      "address2": "REEF Villa 522, Jumeirah Third, Dubai, UAE."
+    },
+    "cards": {
+      "callUs": "Call us",
+      "callDesc": "Monday to Friday, from 09:30 AM to 6:30 PM.",
+      "chatWithUs": "Chat with us",
+      "chatDesc": "Start a WhatsApp conversation with our support team.",
+      "startChat": "Start chat",
+      "joinUs": "Join Us",
+      "joinDesc": "Looking for your next career opportunity? Send us your resume.",
+      "becomePartner": "Become a Channel Partner",
+      "partnerDesc": "Collaborate with REEF on projects and opportunities."
+    }
+  },
+  "projectsPage": {
+    "title1": "TIMELESS DESIGN",
+    "title2": "MODERN INNOVATION",
+    "description": "Discover our signature projects that embody our vision for timeless living and future-ready communities.",
+    "searchPlaceholder": "Search",
+    "sortBy": "Sort by",
+    "relevance": "All",
+    "loadMore": "Load More",
+    "filters": {
+      "apartment": "Apartment",
+      "villa": "Sky Villa",
+      "townhouse": "Townhouse",
+      "bedrooms": "Bedrooms",
+      "duplex": "DUPLEX",
+      "penthouse": "PENTHOUSE"
+    },
+    "roomOptions": {
+      "studio": "Studio",
+      "oneRoom": "1 Bedroom",
+      "twoRooms": "2 Bedrooms",
+      "threeRooms": "3 Bedrooms",
+      "fourRooms": "4 Bedrooms",
+      "fiveRooms": "5 Bedrooms",
+      "sixRooms": "6 Bedrooms",
+      "sevenRooms": "7 Bedrooms",
+      "eightRooms": "8 Bedrooms",
+      "nineRooms": "9 Bedrooms",
+      "tenRooms": "10 Bedrooms"
+    },
+    "sort": {
+      "nearestHandover": "Nearest Handover",
+      "farthestHandover": "Farthest Handover",
+      "newest": "Newest",
+      "oldest": "Oldest"
+    }
+  },
+  "projects": {
+    "viewProject": "VIEW PROJECT",
+    "card": {
+      "handover": "Handover"
+    },
+    "reef999": {
+      "name": "REEF 999",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment"
+    },
+    "reef1000": {
+      "name": "REEF 1000",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment"
+    },
+    "reef998": {
+      "name": "REEF 998",
+      "location": "Dubai Land",
+      "type": "Studio, 1, 2 and 3 Bedroom Apartment"
+    }
+  },
+  "faqSection": {
+    "heading": "GENERAL FAQs",
+    "subheading": "Everything you need to know about our projects. Can’t find what you’re looking for? We’re here to help.",
+    "contact": "Contact Us",
+    "items": [
+      {
+        "title": "FAQ title text here",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "FAQ title text here",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "FAQ title text here",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "FAQ title text here",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  },
+  "topbar": {
+    "message": "REEF UAE Resident Support Program",
+    "cta": "Join the wishlist"
+  },
+  "privacy": {
+    "title": "PRIVACY POLICY",
+    "effectiveLabel": "Effective date:",
+    "effectiveDate": "15 September 2025",
+    "intro": {
+      "p1": "This Privacy Policy explains how <strong>REEF Luxury Developments (“REEF”, “we”, “us”, “our”)</strong>, a company registered in Dubai, United Arab Emirates, acting as Data Controller, collects, uses, shares, and protects information when you interact with:",
+      "channels": [
+        "Our website: <a href=\"https://www.reefdevelopments.ae\" class=\"text-blue-500 underline\">https://www.reefdevelopments.ae/</a>  (the <strong>“Website”</strong>) .",
+        "Email, SMS/WhatsApp, and other electronic messages between you and REEF .",
+        "Mobile or desktop apps we make available via the Website .",
+        "Our advertising and applications on third-party websites/services that link to this Policy .",
+        "Our contact centers (including recorded or monitored calls for quality and compliance)."
+      ],
+      "p2": "By using our Website or otherwise providing personal data to us, you acknowledge that you have read and understood this Policy. Your use of our services constitutes explicit consent to the processing of your personal data as described herein, where consent is required under applicable UAE law.",
+      "p3": "This Privacy Policy is designed to comply with the UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (“PDPL”), as may be amended."
+    },
+    "sections": [
+      {
+        "title": "1) Personal Data We Collect",
+        "content": [
+          {
+            "type": "p",
+            "text": "<strong>“Personal Data”</strong> means any information that identifies you or can be linked to you. We may collect:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Identity & contact data : </strong> name, email, phone, postal address.",
+              "<strong>Government/ID data (where legally required) : </strong> Emirates ID, passport no , property/unit ID.",
+              "<strong>Contract & transaction data : </strong> unit selections, reservation/contract details, payments.",
+              "<strong>Financial data : </strong> payment card details, bank transfer information, financing details.",
+              "<strong>Profile & preferences : </strong> interests, language, communication preferences.",
+              "<strong>Technical & usage data : </strong> IP address, device/browser, cookies, pages viewed, interaction timestamps.",
+              "<strong>Communications data : </strong> emails, messages, call recordings (for training, service quality, and dispute resolution).",
+              "CCTV footage collected at REEF sales centers, project sites, or offices for security and safety purposes."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "You can choose not to share certain data, but this may limit access to some features or services."
+          },
+          {
+            "type": "p",
+            "text": "<strong>Non-Personal Data :</strong> We also collect aggregated or de-identified information (e.g., device type, general usage patterns) that does not identify you individually."
+          }
+        ]
+      },
+      {
+        "title": "2) How We Collect Data",
+        "content": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Directly from you:</strong> when you browse the Website, complete forms, use live chat, subscribe to newsletters, request brochures, or participate in events/briefings.",
+              "<strong>Automatically: </strong> via cookies, pixels, and similar technologies as you navigate the Website.",
+              "<strong>From third parties: </strong> channel/agency partners, marketing vendors, analytics providers, social platforms, public sources, and where permitted, data verification/AML/KYC service providers.",
+              "Through physical security systems, including CCTV monitoring at sales centers or project sites."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3) Cookies & Similar Technologies",
+        "content": [
+          {
+            "type": "p",
+            "text": "We and our partners use cookies and similar tools to operate the Website, enhance performance, remember your preferences, and measure marketing effectiveness."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong> Managing cookies : </strong> Most browsers let you block or delete cookies. If you disable cookies, parts of the Website may not function properly.",
+              "For guidance on managing cookies, visit resources like aboutcookies.org or your browser’s help section."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "4) How We Use Personal Data",
+        "content": [
+          {
+            "type": "p",
+            "text": "We process your data to:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong> Provide and improve services : </strong>respond to enquiries; enable registrations/applications; support viewings/briefings; service existing relationships.",
+              "<strong> Operate the Website and apps : </strong>troubleshooting, analytics, security, fraud prevention.",
+              "<strong> Customer communications : </strong>send project updates, availability, pricing, policy/terms changes.",
+              "<strong> Marketing (where permitted):</strong>send brochures, event invites, product news, and offers by REEF or appointed marketing vendors.",
+              "<strong> Surveys & promotions : <strong>conduct satisfaction surveys, contests, or campaigns.",
+              "<strong> Legal & compliance : </strong>KYC/AML (as applicable), prevent fraud, exercise/defend legal claims.",
+              "Comply with obligations under Dubai Land Department (DLD) and Real Estate Regulatory Agency (RERA) requirements.",
+              "For external processing, We sometimes employ third parties outside of REEF  to process information on our behalf in compliance with this Privacy Policy and using other appropriate security and confidentiality measures.",
+              "For legal purposes, We share your information when we believe that the disclosure is reasonably necessary to (a) comply with applicable laws, regulations, legal process, or requests from law enforcement or regulatory authorities, (b) prevent, detect, or otherwise handle fraud, security, or technical issues, and (c) protect the safety, rights, or property of any person, the public, or REEF.",
+              "For business purposes, We may share your information in connection with, or during negotiations of, any merger, sale of company assets, financing or acquisition of all or a portion of our business by another company. We may also share your information between and among REEF, and its current and future parents, affiliates, subsidiaries, and other companies under common control and ownership.",
+              "We share your information with trusted marketing service providers who assist us in managing and delivering targeted campaigns. You may withdraw your consent and opt out of receiving marketing communications and related data sharing at any time through your account settings (see Section 9).",
+              "<strong>Any purpose disclosed at collection </strong> or with your <strong>consent<strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "5) Legal Bases (where applicable)",
+        "content": [
+          {
+            "type": "p",
+            "text": "Depending on the jurisdiction and context, we rely on one or more of the following lawful bases:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong> Contract : </strong>to perform a contract or take steps at your request (e.g., processing a booking).",
+              "<strong> Legitimate interests : </strong>to run and protect our business, improve services, and communicate appropriately, balanced against your rights.",
+              "<strong> Legal obligation : </strong>to comply with laws (e.g., AML, tax, accounting).",
+              "<strong> Consent:</strong>for certain marketing or where required by law. You can withdraw consent at any time.",
+              "For UAE residents, direct marketing communications are only sent based on consent."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "6) Sharing Personal Data",
+        "content": [
+          {
+            "type": "p",
+            "text": "We <strong> do not sell </strong> your Personal Data. We may share it with:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>REEF group entities</strong> and <strong>trusted service providers </strong> (e.g., hosting, analytics, marketing vendors, customer support, electronic signature platforms, document storage) under contracts that require data protection.",
+              "<strong>Channel partners/agents</strong> involved in servicing your enquiry/transaction, where relevant.",
+              "<strong>Banks/financiers, trustees, and authorities</strong> as needed to process registrations/mortgages or comply with law.",
+              "<strong>Advertising/measurement partners</strong> to deliver/measure campaigns (in line with your settings).",
+              "<strong>Professional advisers </strong>(legal, audit, accounting) and <strong>fraud prevention/law enforcement</strong> where required.",
+              "<strong>Corporate transactions :</strong> if we sell, merge, or transfer part of our business, your data may transfer to the new owner under the same protections.",
+              "Government authorities such as the Dubai Land Department, RERA, or other competent UAE authorities, where required by law.",
+              "Third-party marketing vendors and service providers are not permitted to use your Personal Data for their own independent purposes."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "7) International Transfers",
+        "content": [
+          {
+            "type": "p",
+            "text": "Your data may be processed or stored outside your country. This may include transfers to jurisdictions where our group entities, service providers, cloud hosting providers, banks, or professional advisers are located."
+          },
+          {
+            "type": "p",
+            "text": "Where required, we implement safeguards (e.g., contractual protections) so that your Personal Data receives an equivalent level of protection. In particular, for transfers to countries outside the United Arab Emirates, we rely on one or more of the following safeguards to ensure compliance with the UAE Personal Data Protection Law (PDPL):"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Adequacy decisions issued by the UAE Data Office confirming that the recipient jurisdiction provides an adequate level of protection",
+              "Standard contractual clauses or data transfer agreements with the data recipient, incorporating supplementary technical and organizational measures (e.g., encryption, access restrictions) where required.",
+              "Other lawful grounds for transfer under the PDPL, including transfers necessary to perform a contract with you, to establish, exercise, or defend legal claims, or to comply with regulatory obligations (including those of the Dubai Land Department, RERA, or other competent UAE authorities)."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "If the law of the country from which you access our Website or services imposes stricter requirements for international transfers, we will comply with those local requirements in addition to PDPL safeguards."
+          }
+        ]
+      },
+      {
+        "title": "8) Security ",
+        "content": [
+          {
+            "type": "p",
+            "text": "We use administrative, technical, and physical safeguards to help protect Personal Data against accidental loss and unauthorized access, use, alteration, or disclosure."
+          },
+          {
+            "type": "p",
+            "text": "While we work to protect your information, <strong>no method of transmission over the Internet is completely secure</strong>. Any transmission is at your own risk."
+          },
+          {
+            "type": "p",
+            "text": "Access to Personal Data is restricted to authorized employees, contractors, directors, and service providers who are subject to confidentiality obligations."
+          }
+        ]
+      },
+      {
+        "title": "9) Your Choices & Rights",
+        "content": [
+          {
+            "type": "ul",
+            "items": [
+              "<strong>Access & correction:</strong> You may request access to, or correction of, your Personal Data.",
+              "<strong>Rectificstion:</strong> If you notice that your personal data is incorrect, you can always request that we correct it.",
+              "<strong>Deletion & restriction:</strong> You may request deletion or restriction, subject to legal exceptions.",
+              "<strong>Objection:</strong> You may object to certain processing based on legitimate interests.",
+              "<strong>Marketing preferences: </strong>You can opt out of marketing at any time (e.g., using unsubscribe links or contacting us).",
+              "<strong>Consent withdrawal:</strong>Where we rely on consent, you can withdraw it at any time.",
+              "We will respond to verified data subject requests within 30 days, in line with the PDPL."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "To exercise rights, contact us (Section 13). We may need to verify your identity before acting on requests."
+          },
+          {
+            "type": "p",
+            "text": "You also have the right to lodge a complaint with the UAE Data Office if you are not satisfied with our response."
+          }
+        ]
+      },
+      {
+        "title": "10) Data Retention",
+        "content": [
+          {
+            "type": "p",
+            "text": "We keep Personal Data only as long as necessary for the purposes described in this Policy."
+          },
+          {
+            "type": "p",
+            "text": "The duration for which we retain your personal data is determined by factors such as the scope, nature and purposes of the personal data processing, and whether we have legitimate interests or legal obligations that require us to retain your personal data."
+          }
+        ]
+      },
+      {
+        "title": "11) Third-Party Links",
+        "content": [
+          {
+            "type": "p",
+            "text": "The Website may link to third-party sites/apps. We are not responsible for their privacy practices. Please review their policies before providing data."
+          },
+          {
+            "type": "p",
+            "text": "REEF is not responsible for any data collected independently by third-party real estate portals, agencies, or listing websites."
+          }
+        ]
+      },
+      {
+        "title": "12) Sensitive Personal Data",
+        "content": [
+          {
+            "type": "p",
+            "text": "We do not intentionally collect or process sensitive categories of personal data (such as health information, biometric data, or political/religious beliefs) unless required by law (e.g., KYC/AML checks). Where collected, we apply additional safeguards."
+          }
+        ]
+      },
+      {
+        "title": "13) Data Minimization Principle",
+        "content": [
+          {
+            "type": "p",
+            "text": "We only collect personal data that is necessary and proportionate for the purposes described in this Policy and retain it only for as long as required by law or legitimate business purposes."
+          }
+        ]
+      },
+      {
+        "title": "14) Changes to This Policy",
+        "content": [
+          {
+            "type": "p",
+            "text": "We may update this Policy from time to time."
+          },
+          {
+            "type": "p",
+            "text": "Updates take effect when posted on the Website, so we encourage you to review it regularly."
+          },
+          {
+            "type": "p",
+            "text": "Your continued use after changes means you accept the updated Policy."
+          }
+        ]
+      },
+      {
+        "title": "15) Contact Us",
+        "content": [
+          {
+            "type": "p",
+            "text": "If you have questions, requests, or complaints regarding this Policy or our data practices, please contact:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "<strong>REEF Luxury Developments LLC</strong>",
+              "<strong>Email :</strong> <a href=\"clientexperience@reefdevelopments.ae\"class=\"text-blue-500 underline\">clientexperience@reefdevelopments.ae",
+              "<strong>Registered Office : </strong> REEF Luxury Development LLC, REEF Villa 522, Jumeirah Third, Dubai, UAE."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "TERMS AND CONDITIONS",
+    "sections": [
+      {
+        "title": "1. AGREEMENT & AMENDMENT",
+        "content": [
+          {
+            "type": "p",
+            "text": "This Website is owned and operated by REEF Luxury Development LLC and its affiliates (referred to as the “Company”, “we,” or “us”). Please carefully read these “Terms and Conditions,” the general terms governing your access and use of the Website."
+          },
+          {
+            "type": "p",
+            "text": "By accessing any part of the Website, you (“You” or “Your”) agree to be legally bound by these Terms. We reserve the right to amend these Terms at any time in compliance with UAE laws. Any amendments shall take effect immediately upon posting on the Website, and Your continued use of the Website after such posting constitutes Your explicit acceptance of the amended Terms. You are responsible for regularly reviewing these Terms."
+          },
+          {
+            "type": "p",
+            "text": "Additional terms and conditions that vary or supplement the Terms may apply. If You apply for any property, product, or service detailed on the Website, these terms should be read with any other applicable terms. In case of any contradiction between the Terms and specific terms relating to a property, product, or service, the latter shall prevail. You agree to use the website in accordance with all applicable laws relevant to the jurisdiction from which You access the Website."
+          },
+          {
+            "type": "p",
+            "text": "The Website is intended for users who are at least 18 years old. Persons under the age of 18 are not permitted to use or register for the Website."
+          }
+        ]
+      },
+      {
+        "title": "2. WEBSITE CONTENT",
+        "content": [
+          {
+            "type": "p",
+            "text": "All information, text, materials, graphics, logos, button icons, images, video and audio clips, trademarks (whether registered or not), advertisements, layout, arrangement, graphical user interface, look and feel, and control features of the website (collectively, the “Website Content”) is provided as a service to allow you and other users to browse the Website Content."
+          },
+          {
+            "type": "p",
+            "text": "Any property details, renderings, images, videos, or brochures shown on the Website and/or in the Website Content are provided for illustrative purposes only and shall not constitute part of any offer, contract, or legal commitment. All property information is subject to change without notice and must be independently verified. Any prices shown are indicative only and subject to change at the Company's sole discretion in accordance with RERA regulations."
+          }
+        ]
+      },
+      {
+        "title": "3. USE OF WEBSITE CONTENT",
+        "content": [
+          {
+            "type": "p",
+            "text": "You are permitted to access and use the Website for personal, non-commercial purposes, and you must not:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Modify, publish, transmit, transfer, sell, reproduce, create derivative works, distribute, perform, display, or exploit any Website Content, except as expressly permitted in these Terms.",
+              "Use the Website in violation of any applicable law or regulation.",
+              "Transmit, distribute, store, or destroy material in a manner that infringes intellectual property rights or violates the rights of others.",
+              "Sell, modify, delete, or reproduce Website Content for any public or commercial purpose.",
+              "Access data not intended for you or log into unauthorized accounts.",
+              "Attempt to breach security measures without proper authorization.",
+              "Use the Website Content to impersonate or misrepresent your identity.",
+              "Use the Website Content for unsolicited communications, advertisements, or promotions.",
+              "Interfere with the proper working of the Website or attempt to interfere with any activity including without limitation, material that contains viruses, Trojan horses or other computer programming routines or engines that are intended to damage detrimentally interfere with, surreptitiously intercept or expropriate any system, data or information, or on the Website.",
+              "Attempt to decipher, decompile, disassemble, or reverse engineer any Website software.",
+              "Use automated bots, spiders, scrapers, or similar technologies to extract data from the Website."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "You may download or copy Website Content for personal, non-commercial use, provided you maintain all copyright notices. You shall not store electronically any portion of the Website Content. You may not copy, store, redistribute or publish any Website Content without the express written permission of Company or the owners of the Website Content (as the case may be). Unauthorized use or reproduction of the Website Content is strictly prohibited."
+          }
+        ]
+      },
+      {
+        "title": "4. OWN RISK",
+        "content": [
+          {
+            "type": "p",
+            "text": "Any property details or other information on this Website is provided for general guidance only and does not constitute a contractual offer. You must independently verify all information and satisfy yourself as to its accuracy before making any decisions ore incurring any costs or expenses. Nothing on this Website constitutes legal, investment, financial, or real estate advice, and you should seek independent professional advice before making any property-related decisions. The Company makes no guarantees regarding future property values or returns."
+          },
+          {
+            "type": "p",
+            "text": "Access to the Website may not be legal by certain persons or in certain countries. If you access the Website from outside the United Arab Emirates, you do so on your own initiative and are responsible for compliance with local laws."
+          },
+          {
+            "type": "p",
+            "text": "<strong>Browser Settings:</strong>You can choose to accept or decline Cookies through your browser settings. Refer to your browser’s help menu for instructions."
+          },
+          {
+            "type": "p",
+            "text": "<strong>Opting Out of Analytics:</strong> To opt-out of Google Analytics Cookies, visit the Google Analytics Opt-out Browser Add-on."
+          }
+        ]
+      },
+      {
+        "title": "5. USER REPRESENTATIONS",
+        "content": [
+          {
+            "type": "p",
+            "text": "you have the legal capacity, and you agree to comply with these Terms and Conditions:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "You have the legal capacity, and you agree to comply with these Terms and Conditions.",
+              "you are not a minor in the jurisdiction in which you reside.",
+              "you will not access the Website through automated or non-human means, whether through a bot, script, or otherwise.",
+              "you will not use the Website for any illegal or unauthorized purpose.",
+              "all information you provide to us through the Website is true, accurate, complete, and not misleading."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "If you provide any information that is untrue, inaccurate, not current, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Website."
+          }
+        ]
+      },
+      {
+        "title": "6. LINKING TO THE WEBSITE & EXTERNAL LINKS",
+        "content": [
+          {
+            "type": "p",
+            "text": "You are welcome to link to our website as long as your links are fair, legal, and do not damage or exploit our reputation. However, links must not imply any false association, endorsement, or approval from us. You cannot link from a website you do not own, use linking or framing methods implying our endorsement without permission or act contrary to our Terms of Use. We may revoke linking permission at any time without notice."
+          },
+          {
+            "type": "p",
+            "text": "Additionally, Company Website contains links to external websites not operated by us, provided for your convenience. We do not endorse or assume responsibility for the content, accuracy, or legality of these third-party Websites. We are not responsible for the privacy practices of third-party websites."
+          }
+        ]
+      },
+      {
+        "title": "7. WEBSITE MANAGEMENT",
+        "content": [
+          {
+            "type": "p",
+            "text": "We reserve the right, but not the obligation, to:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "1) monitor the Website for violations of these Terms and Conditions.",
+              "2) take appropriate legal action against anyone who, in Company’s sole discretion, violates the law or these Terms and conditions, including but not limited to, reporting such user to law enforcement authorities.",
+              "3) in its sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your contributions or any portion thereof.",
+              "4) in its sole discretion and without limitation, notice, or liability, to remove from the Website or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and.",
+              "5) otherwise manage the Website in a manner designed to protect our rights and property and to facilitate the proper functioning of the Website."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "We may cooperate with the Telecommunications and Digital Government Regulatory Authority (TDRA) or other competent authorities if required by law."
+          }
+        ]
+      },
+      {
+        "title": "8. USER DATA",
+        "content": [
+          {
+            "type": "p",
+            "text": "We will maintain certain data that you transmit to the Website for the purpose of managing the performance of the Website, as well as data relating to your use of the Website."
+          },
+          {
+            "type": "p",
+            "text": "Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Website."
+          },
+          {
+            "type": "p",
+            "text": "You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data."
+          },
+          {
+            "type": "p",
+            "text": "We process personal data in accordance with Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL) and other applicable UAE regulations. For further details, please refer to our Privacy Policy."
+          }
+        ]
+      },
+      {
+        "title": "9. INTELLECTUAL PROPERTY",
+        "content": [
+          {
+            "type": "p",
+            "text": "We hold exclusive ownership or is duly licensed to utilize all copyright and intellectual property featured on this Website, including texts, images, and links."
+          },
+          {
+            "type": "p",
+            "text": "The trademarks, such as product names, trade names, service marks, slogans, and logos (“Marks”), are protected by the intellectual property laws of the United Arab Emirates and beyond."
+          },
+          {
+            "type": "p",
+            "text": "Usage, reproduction, or distribution of these Marks without the explicit written permission of Company is forbidden, except when used solely to identify our properties or services."
+          },
+          {
+            "type": "p",
+            "text": "Unauthorized use may constitute a violation of our intellectual property rights."
+          }
+        ]
+      },
+      {
+        "title": "10. INDEMNITY",
+        "content": [
+          {
+            "type": "p",
+            "text": "You agree to indemnify, defend and hold the Company, its affiliates, directors, officers, employees, agents, and representatives harmless from and against any and all claims, liability, suits, judgments, litigation costs, causes of action, demands, recoveries, damages (actual and consequential), fines, penalties, losses, costs and expenses (including attorneys’ fees) of any kind or nature incurred by any company arising from or in any way related to: (i) your use of this Website (including, by third parties), (ii) your breach of these Terms; (iii)or any other terms referenced herein or your violation of applicable laws or third party rights."
+          },
+          {
+            "type": "p",
+            "text": "The Company's obligation to defend shall be limited to claims where a court of competent jurisdiction has made a final determination of Company's gross negligence or willful misconduct. The total aggregate liability of the Company under this indemnification shall not exceed the total fees paid by you in the twelve (12) months preceding any claim."
+          }
+        ]
+      },
+      {
+        "title": "11. DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY",
+        "content": [
+          {
+            "type": "p",
+            "text": "The Website and its content are presented solely for informational purposes, with no assurance or warranty regarding accuracy, completeness, or suitability for specific purposes. You acknowledge that any reliance on the Website for business decisions is at your own risk and should not substitute for professional advice."
+          },
+          {
+            "type": "p",
+            "text": "To the maximum extent permitted under UAE Federal Laws, including but not limited to UAE Civil Code and Commercial Transactions Law, we explicitly disclaim all warranties, whether express, implied, or statutory, including but not limited to merchantability, fitness for a particular purpose, and non-infringement of proprietary rights. This disclaimer shall apply to the fullest extent permissible under UAE law, as well as applicable regulations issued by competent authorities, including RERA where relevant."
+          },
+          {
+            "type": "p",
+            "text": "The Company, its affiliates, and their personnel disclaim liability for any direct, indirect, incidental, special, punitive, or consequential damages resulting from your use or inability to use the Website and its content. This encompasses damages such as lost profits, data loss, or business interruption, irrespective of the cause or legal basis, even if notified of the potential for such damages."
+          }
+        ]
+      },
+      {
+        "title": "12. SUBMISSIONS",
+        "content": [
+          {
+            "type": "p",
+            "text": "Any information submitted to us through this Website is considered and remains the property of Company. We have the unrestricted right to utilize, for any purpose, the ideas, concepts, know-how, or techniques contained in the information provided by a visitor through this Website."
+          },
+          {
+            "type": "p",
+            "text": "However, this does not apply to personal data, which will be handled strictly in accordance with our Privacy Policy and applicable UAE data protection laws."
+          }
+        ]
+      },
+      {
+        "title": "13. MODIFICATIONS & INTERRUPTIONS",
+        "content": [
+          {
+            "type": "p",
+            "text": "We reserve the right to change, modify, or remove the contents of the Website at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our website."
+          },
+          {
+            "type": "p",
+            "text": "We also reserve the right to modify or discontinue all or part of the Website without notice at any time. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Website."
+          },
+          {
+            "type": "p",
+            "text": "We will use reasonable efforts to restore access to the Website in the event of downtime or interruptions."
+          }
+        ]
+      },
+      {
+        "title": "14. TERM AND TERMINATION",
+        "content": [
+          {
+            "type": "p",
+            "text": "These Terms & Conditions shall remain in full force and effect while you use the Website. Without limiting any other provision of these terms & Conditions, we reserve the right to, in our sole discretion and without notice or liability, deny access to and use of the Website (including blocking certain IP addresses), to any person for any reason or for no reason, including without limitation for breach of any representation, warranty, or covenant contained in these Terms & Conditions or of any applicable law or regulation."
+          },
+          {
+            "type": "p",
+            "text": "We may terminate your use or participation on the Website or delete any content or information that you posted at any time, without warning, in our sole discretion."
+          },
+          {
+            "type": "p",
+            "text": "We may suspend or discontinue specific services offered on the Website without terminating your overall Website access."
+          }
+        ]
+      },
+      {
+        "title": "15. GOVERNING LAWS AND JURISDICTION",
+        "content": [
+          {
+            "type": "p",
+            "text": "Your use of our Website, its content, services and / or any information / material posted or available on this Website, shall be governed by the law of the United Arab Emirates as applied in the Emirate of Dubai. You agree to submit to the exclusive jurisdiction of the Dubai Courts."
+          }
+        ]
+      },
+      {
+        "title": "16. CONTACT INFORMATION",
+        "content": [
+          {
+            "type": "p",
+            "text": "For technical support and other communications related to this Website, you may contact us through our website contact form. You may also contact us at our registered office address: REEF Luxury Development LLC, REEF Villa 522, Jumeirah Third, Dubai, UAE."
+          }
+        ]
+      },
+      {
+        "title": "17. ENTIRE AGREEMENT",
+        "content": [
+          {
+            "type": "p",
+            "text": "These Terms constitute the entire agreement between you and us regarding Website use and supersede any prior understandings."
+          }
+        ]
+      },
+      {
+        "title": "18. SEVERABILITY",
+        "content": [
+          {
+            "type": "p",
+            "text": "If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect."
+          }
+        ]
+      },
+      {
+        "title": "19. WAIVER",
+        "content": [
+          {
+            "type": "p",
+            "text": "Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision."
+          }
+        ]
+      },
+      {
+        "title": "20. NO OFFER",
+        "content": [
+          {
+            "type": "p",
+            "text": "Nothing on this Website constitutes an offer, solicitation, or invitation to purchase real estate, securities, or investments, nor does it form the basis of any contract."
+          },
+          {
+            "type": "p",
+            "text": "All real estate advertisements and marketing materials are subject to Dubai Real Estate Regulatory Agency (RERA) regulations and approvals."
+          },
+          {
+            "type": "p",
+            "text": "Any property purchase shall be subject to a separate sale and purchase agreement in compliance with applicable UAE and Dubai real estate laws."
+          }
+        ]
+      },
+      {
+        "title": "21. ONLINE PAYMENTS",
+        "content": [
+          {
+            "type": "ul",
+            "items": [
+              "All online payments on this Website are processed securely through an authorized payment gateway licensed in the United Arab Emirates.",
+              "Accepted payment methods include valid credit/debit cards and other online payment options displayed during checkout.",
+              "All transaction amounts are denominated in UAE Dirhams (AED) unless stated otherwise.",
+              "You are responsible for ensuring that all payment information (including card details and contact data) is accurate before submission.",
+              "Upon successful payment, you will receive a confirmation email containing a transaction reference number.",
+              "The Company is not responsible for any failed or delayed payments resulting from banking errors, network issues, or third-party interruptions.",
+              "If any transaction is determined to be incorrect, unauthorized, or fraudulent, the Company reserves the right to reverse the payment, and any amounts reversed shall remain due and payable by the customer.",
+              "If a transaction is submitted on a weekend or a non-working public holiday, the reversal or refund (where applicable) will be processed on the next working business day.",
+              "For the avoidance of doubt, online payments made through this Website do not constitute a confirmation of sale or create any contractual rights to a property unit. They serve solely as a convenience facility to allow clients to make payments or booking deposits quickly and efficiently. Any disputes, refunds, or related considerations shall be handled strictly in accordance with the terms of the applicable OTP, SPA, and RERA regulations.",
+              "All transactions are governed by the laws of the United Arab Emirates and subject to the exclusive jurisdiction of the Courts of Dubai."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

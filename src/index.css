@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General Sans Variable Font */
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/general-sans/GeneralSans-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/general-sans/GeneralSans-VariableItalic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  /* background-color: #40C2CC; */
+  min-height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Bodoni Moda", serif;
+  scroll-behavior: smooth;
+  font-optical-sizing: none !important; 
+  font-kerning: auto;
+  background-color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

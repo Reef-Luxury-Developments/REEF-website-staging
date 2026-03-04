@@ -1,0 +1,19 @@
+/* 
+.clip-custom {
+  /* قص الشكل العلوي والسفلي */
+  /* clip-path: polygon(
+    0% 5%, 2% 0%, 98% 0%, 100% 5%, 100% 95%, 98% 100%, 2% 100%, 0% 95%
+  );
+} */ 
+
+/* .custom-clip {
+  clip-path: polygon(
+    0 0,               /* top-left */
+    /* 95% 0,             /* before top-right cut */
+    /* 100% 5%,           /* top-right cut */
+    /* 100% 95%,          /* before bottom-right cut */
+    /* 95% 100%,          /* bottom-right cut */
+    /* 0 100%             bottom-left */
+  /* );
+}  */
+
