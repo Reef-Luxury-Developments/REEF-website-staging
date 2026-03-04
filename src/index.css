@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  overflow-x: hidden;
+    font-family: "Bodoni Moda", serif;
+    scroll-behavior: smooth;
+    font-optical-sizing: none !important; 
+    font-kerning: auto;
+}
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

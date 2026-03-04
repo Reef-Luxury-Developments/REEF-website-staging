@@ -1,0 +1,144 @@
+
+
+/* .custom-input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.custom-input:hover {
+  animation: border-bottom-fade 1s forwards;
+}
+
+@keyframes border-bottom-fade {
+  0% {
+    border-bottom-color: transparent;
+  }
+  90% {
+    border-bottom-color: transparent;
+  }
+  100% {
+    border-bottom-color: #333; /* اللون الأغمق */
+  /* }
+}  */
+/* 
+.custom-input {
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  outline: none;
+    transition: all 1.5s ease;
+      caret-color: #0A181A;
+}
+
+.custom-input:hover
+ {
+  animation: border-bottom-fade 1.5s forwards;
+}
+.custom-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  animation: border-bottom-fade 1s forwards;
+  animation-delay: 1s; 
+}
+
+@keyframes border-bottom-fade {
+  0% {
+    border-bottom-color: #ccc;
+    border-bottom-width: 1.5px;
+  }
+  100% {
+    border-bottom-color: #aaa;
+    border-bottom-width: 2.3px;  
+  }
+} */
+
+/* .custom-input {
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  outline: none;
+  caret-color: #0A181A;
+  transition: border-bottom-color 0.3s ease, border-bottom-width 0.3s ease;
+}
+
+.custom-input:hover {
+  border-bottom-color: #888;
+  border-bottom-width: 2px;
+}
+
+.custom-input:focus {
+  border-bottom-color: #555;
+  border-bottom-width: 2.3px;
+  outline: none !important;
+  box-shadow: none !important;
+} */
+
+
+/* .custom-input {
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  outline: none;
+  caret-color: #0A181A;
+  animation: none;
+}
+
+/* Hover effect */
+/* .custom-input:hover {
+  animation: border-bottom-hide-then-show 1.5s forwards;
+} */
+
+/* Focus effect */
+/* .custom-input:focus {
+  animation: border-bottom-hide-then-show 1.5s forwards;
+  outline: none !important;
+  box-shadow: none !important;
+} */
+
+/* Keyframes animation */
+/* @keyframes border-bottom-hide-then-show {
+  0% {
+    border-bottom-color: transparent;
+    border-bottom-width: 1.5px;
+  }
+  60% {
+    border-bottom-color: transparent;
+    border-bottom-width: 1.5px;
+  }
+  100% {
+    border-bottom-color: #555;
+    border-bottom-width: 2.3px;
+  }
+}  */
+
+
+.custom-input {
+  border: none;
+  border-bottom: 1.5px solid #ccc; /* الخط الأساسي */
+  outline: none;
+  transition: all 1.5s ease;
+}
+
+/* hover فقط */
+.custom-input:hover {
+  animation: border-bottom-fade 1.5s forwards;
+}
+
+/* focus فقط (بـ delay بسيط) */
+.custom-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  animation: border-bottom-fade 1.5s forwards;
+  animation-delay: 1.5s;
+}
+
+/* Animation */
+@keyframes border-bottom-fade {
+  0% {
+    border-bottom-color: #ccc;
+    border-bottom-width: 1.5px;
+  }
+  100% {
+    border-bottom-color: #aaa; /* أغمق */
+    border-bottom-width: 2.3px; /* أسمك */
+  }
+}
