@@ -12,7 +12,7 @@ import Tab from "../../components/brand/tab";
 export default function AboutUs() {
   const theme = useTheme();
   const { t } = useLanguage();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { data: aboutData, isLoading: aboutLoading } = useQuery({
     queryKey: ["about-us", "journal"],
     queryFn: async () => {
@@ -29,7 +29,6 @@ export default function AboutUs() {
   };
   return (
     <>
-
       {/* Hero section */}
       <section className="flex flex-col w-full md:h-full">
         <Navbar />
@@ -41,9 +40,7 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="sm:p-4">
-              <h1
-                className="uppercase font-bodoni font-medium text-center text-[clamp(2.5rem,9vw,9rem)] leading-[1] text-[#0A181A] md:whitespace-pre-line md:text-start"
-              >
+              <h1 className="uppercase font-bodoni font-medium text-center text-[clamp(2.5rem,9vw,9rem)] leading-[1] text-[#0A181A] md:whitespace-pre-line md:text-start">
                 {t("about.OurStory")}
               </h1>
               <p className="md:hidden font-general text-md text-center text-[#0A181A]/55 p-4">
@@ -51,16 +48,12 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-          <img
-            src="/assets/about_us.png"
-            alt="About REEF"
-          />
+          <img src="/assets/about_us.png" alt="About REEF" />
         </div>
       </section>
 
       {/* About Description Section */}
       <section className="flex flex-col gap-4 w-full mx-auto py-16 px-4 md:w-5/6 md:flex-row md:justify-between md:py-32 md:px-0">
-
         <div className="flex-1 ">
           <h1 className="font-general text-[#0A181A] text-3xl font-medium whitespace-pre-line">
             {t("about.RightimagetextH1")}
@@ -68,25 +61,21 @@ export default function AboutUs() {
         </div>
 
         <div className="w-full md:w-2/3">
-          <p className="font-general text-lg text-[#0A181A]/55 whitespace-pre-line" >
+          <p className="font-general text-lg text-[#0A181A]/55 whitespace-pre-line">
             {t("about.RightimagetextP1")}
           </p>
         </div>
       </section>
 
-
       {/* Founder Section */}
       <section className="flex flex-col items-center gap-8 px-4 py-12 w-full mx-auto md:w-3/5  md:px-0 md:py-24">
-
         <img
           src="/assets/founder_profile_image.jpg"
           alt="Samer Al Nasser Ambar"
           className="w-[250px] h-[250px] md:w-[300px] md:h-[400px] object-cover rounded-full"
         />
 
-        <blockquote
-          className="font-bodoni text-[#0A181A] text-[clamp(2.5rem,3vw,3rem)] leading-[1.1] text-center"
-        >
+        <blockquote className="font-bodoni text-[#0A181A] text-[clamp(2.5rem,3vw,3rem)] leading-[1.1] text-center">
           {t("about.blockquote")}
         </blockquote>
 
@@ -110,7 +99,7 @@ export default function AboutUs() {
             <button
               className="bg-[#40C2CC] text-white hover:bg-[#30AEB8] hover:border-[#30AEB8] rounded-full px-4 py-2 font-medium text-md font-general h-fit text-nowrap"
               onClick={() => {
-                navigate("/conatct-us")
+                navigate("/contact-us");
               }}
             >
               {t("about.ContactUs")}
@@ -122,9 +111,7 @@ export default function AboutUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Mission */}
           <div>
-            <h3
-              className="text-sm uppercase font-general text-[#40C2CC] tracking-wider mb-2"
-            >
+            <h3 className="text-sm uppercase font-general text-[#40C2CC] tracking-wider mb-2">
               {t("about.mission")}
             </h3>
 
@@ -135,9 +122,7 @@ export default function AboutUs() {
 
           {/* Vision */}
           <div>
-            <h3
-              className="text-sm uppercase font-general text-[#40C2CC] tracking-wider mb-2"
-            >
+            <h3 className="text-sm uppercase font-general text-[#40C2CC] tracking-wider mb-2">
               {t("about.vision")}
             </h3>
 
@@ -161,7 +146,7 @@ export default function AboutUs() {
             <button
               className="bg-[#40C2CC] text-white hover:bg-[#30AEB8] hover:border-[#30AEB8] rounded-full px-4 py-2 font-medium text-md font-general h-fit text-nowrap"
               onClick={() => {
-                navigate("/conatct-us")
+                navigate("/contact-us");
               }}
             >
               {t("about.ContactUs")}
@@ -195,29 +180,23 @@ export default function AboutUs() {
           ].map((pillar, index) => (
             <div
               key={index}
-              className={` flex flex-col md:flex-row items-start justify-start pb-8 mb-8 border-b border-[#0A181A]/15 ${pillar.number === "04" && "border-none"
-                }`}
+              className={` flex flex-col md:flex-row items-start justify-start pb-8 mb-8 border-b border-[#0A181A]/15 ${
+                pillar.number === "04" && "border-none"
+              }`}
             >
               {/* Left Content / Number + Title */}
               <div className="flex flex-1 items-center gap-4 md:gap-12 mb-2 ">
-                <span
-                  className="text-lg font-general text-[#40C2CC] font-medium"
-                >
+                <span className="text-lg font-general text-[#40C2CC] font-medium">
                   {pillar.number}
                 </span>
-                <h3
-                  className="text-lg font-general font-medium"
-                >
+                <h3 className="text-lg font-general font-medium">
                   {pillar.title}
                 </h3>
               </div>
 
               {/* Content */}
               <div className="flex-1 pe-4">
-                <p
-                  className="font-general text-lg text-[#0A181A]/55"
-
-                >
+                <p className="font-general text-lg text-[#0A181A]/55">
                   {pillar.description}
                 </p>
               </div>
@@ -226,8 +205,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-
-      < RegisterSection />
+      <RegisterSection />
       <Tab />
     </>
   );

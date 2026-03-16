@@ -92,7 +92,7 @@ const Foot = () => {
     { title: t("foot.Project"), link: "/project-all" },
     { title: t("foot.About"), link: "/aboutus" },
     // { title: t("foot.News"), link: "/media-center" },
-    { title: t("foot.Contact"), link: "/conatct-us" },
+    { title: t("foot.Contact"), link: "/contact-us" },
     { title: t("foot.FAQ"), link: "/faq" },
     {
       title: t("foot.ChannelPartner"),

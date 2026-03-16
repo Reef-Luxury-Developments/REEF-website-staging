@@ -35,7 +35,7 @@ export default function FaqComponent() {
     try {
       return groups.findIndex(
         (g: any) =>
-          String(g?.groupName || "").toLowerCase() === "general inquiry"
+          String(g?.groupName || "").toLowerCase() === "general inquiry",
       );
     } catch {
       return -1;
@@ -56,7 +56,7 @@ export default function FaqComponent() {
               ? item.questions[0]
               : item?.questions || "",
             content: item?.answer || "",
-          }))
+          })),
         );
       }
       const group = groups[activeGroupIndex];
@@ -84,7 +84,7 @@ export default function FaqComponent() {
         <p className="font-general px-2 text-[#0A181A8F]/55 text-lg">
           {t("faq.Qtitle")}
           <Link
-            to="/conatct-us"
+            to="/contact-us"
             className="font-general text-lg text-[#40C2CC] font-medium hover:underline hover:text-[#30AEB8]"
           >
             {t("faqSection.contact")}

@@ -34,7 +34,7 @@ const formatHandoverQuarter = (s?: string) => {
 const Index = () => {
   const [openIndex, setOpenIndex] = useState(0);
   const [selectedType, setSelectedType] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const unitTypes = [
     { name: "Apartment", value: 0 },
@@ -42,7 +42,7 @@ const Index = () => {
     { name: "Townhouse", value: 2 },
   ];
   const [selectedRoom, setSelectedRoom] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const roomOptions = [
     { name: "Studio", value: 1 },
@@ -52,7 +52,7 @@ const Index = () => {
     { name: "FourRooms", value: 5 },
   ];
   const [selectedSort, setSelectedSort] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const sortOptions = [
     { name: "Nearest Handover", value: 0 },
@@ -163,7 +163,7 @@ const Index = () => {
           : item?.questions || "",
         content: item?.answer || "",
       })),
-    [faqsData]
+    [faqsData],
   );
 
   return (
@@ -378,7 +378,7 @@ const Index = () => {
           </p>
           <div className="flex w-full justify-start">
             <Link
-              to="/conatct-us"
+              to="/contact-us"
               className="font-general text-lg text-[#40C2CC] font-medium hover:underline hover:text-[#30AEB8]"
             >
               {t("faqSection.contact")}
@@ -524,7 +524,7 @@ const ProjectCard = ({ project }: any) => {
                         {text}
                         {i % 2 === 0 && i !== arr.length - 1 ? "," : ""}
                       </div>
-                    )
+                    ),
                   )
                 : null}
             </div>

@@ -9,10 +9,10 @@ import { GoArrowUpRight } from "react-icons/go";
 const MENU_ITEMS = [
   { labelKey: "menu.home", href: "/" },
   { labelKey: "menu.projects", href: "/project-all" },
-// { labelKey: "menu.media_center", href: "/media-center" },
+  // { labelKey: "menu.media_center", href: "/media-center" },
 
   { labelKey: "menu.ourStory", href: "/aboutus" },
-  { labelKey: "menu.contact", href: "/conatct-us" },
+  { labelKey: "menu.contact", href: "/contact-us" },
   { labelKey: "menu.faq", href: "/faq" },
 ];
 
@@ -69,28 +69,38 @@ export default function FullscreenMenuOverlay({
           {/* Content */}
           <div className="relative h-full mt-4 w-full flex flex-col">
             <div className="grid grid-cols-3  mt-[45px]  absolute  z-[9999] w-[97%] start-0 h-20 mx-8  max-sm:hidden ms-8">
-              <div className="bg-[#40C2CC]  relative rounded-tl-[24px] rtl:rounded-tr-[24px] rtl:rounded-tl-none w-full  h-full flex-1 " >
-                <IoCloseSharp onClick={onClose} className="absolute top-5 full  cursor-pointer start-5  text-white text-3xl"  />
+              <div className="bg-[#40C2CC]  relative rounded-tl-[24px] rtl:rounded-tr-[24px] rtl:rounded-tl-none w-full  h-full flex-1 ">
+                <IoCloseSharp
+                  onClick={onClose}
+                  className="absolute top-5 full  cursor-pointer start-5  text-white text-3xl"
+                />
               </div>
               <div className="flex justify-between w-full">
-              <img src="/assets/menu_shap_02.svg" className="ms-[-1px] h-full transform rtl:scale-x-[-1]" /> 
-              <img src="/assets/menu_shap_01.svg" className=" me-[-2px] h-full transform rtl:scale-x-[-1]" />
-           
-
+                <img
+                  src="/assets/menu_shap_02.svg"
+                  className="ms-[-1px] h-full transform rtl:scale-x-[-1]"
+                />
+                <img
+                  src="/assets/menu_shap_01.svg"
+                  className=" me-[-2px] h-full transform rtl:scale-x-[-1]"
+                />
               </div>
               {/* <img onClick={onClose} src="/assets/Start.png" className="w-full " /> */}
               {/* */}
               <div className="bg-[#40C2CC] rounded-tr-[24px] rtl:rounded-tl-[24px] mt-[-0.2px] rtl:rounded-tr-none   w-full h-full flex-1" />
             </div>
-           
 
-              <div className="hidden absolute z-[9999999] start-0 top-0 h-20 max-sm:flex  ms-2">
-              <img onClick={onClose} src="/assets/Start2.png" className="w-full " />
-              <img src="/assets/Subtract2.png" className="w-full  transform rtl:scale-x-[-1]" />
-
-            </div> 
-          
-
+            <div className="hidden absolute z-[9999999] start-0 top-0 h-20 max-sm:flex  ms-2">
+              <img
+                onClick={onClose}
+                src="/assets/Start2.png"
+                className="w-full "
+              />
+              <img
+                src="/assets/Subtract2.png"
+                className="w-full  transform rtl:scale-x-[-1]"
+              />
+            </div>
 
             {/* Centered menu */}
             <nav
@@ -103,7 +113,8 @@ export default function FullscreenMenuOverlay({
                     <NavLink
                       to={item.href}
                       onClick={onClose}
-                      className="inline-block  transition-all duration-500 ease-in-out hover:text-[#FFFFFF8F] font-bodoni  max-sm:text-4xl max-sm:tracking-[0px] font-medium tracking-[-4px] text-7xl   text-white"                    >
+                      className="inline-block  transition-all duration-500 ease-in-out hover:text-[#FFFFFF8F] font-bodoni  max-sm:text-4xl max-sm:tracking-[0px] font-medium tracking-[-4px] text-7xl   text-white"
+                    >
                       {String(t(item.labelKey))}
                     </NavLink>
                   </li>
@@ -117,14 +128,17 @@ export default function FullscreenMenuOverlay({
                     {t("register.title")}
                   </h3>
                   <NavLink
-                    to="/conatct-us"
+                    to="/contact-us"
                     onClick={onClose}
                     className="inline-flex mt-4 items-center gap-3 bg-white border border-white rounded-full ps-4 pe-4 py-2"
                   >
                     <span className="font-sans font-semibold text-[#40C2CC]">
                       {t("about.Get_in_touch")}
                     </span>
-                    <span className="w-9 h-9 rounded-full flex items-center justify-center" style={{ background: "#40C2CC" }}>
+                    <span
+                      className="w-9 h-9 rounded-full flex items-center justify-center"
+                      style={{ background: "#40C2CC" }}
+                    >
                       <GoArrowUpRight className="text-white text-xl" />
                     </span>
                   </NavLink>
