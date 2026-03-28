@@ -90,9 +90,12 @@ const Foot = () => {
   const links = [
     { title: t("foot.Home"), link: "/" },
     { title: t("foot.Project"), link: "/project-all" },
+
+    // TODO: uncomment when communities are ready
+    // { title: t("foot.Communities"), link: "/communities" },
     { title: t("foot.About"), link: "/aboutus" },
     // { title: t("foot.News"), link: "/media-center" },
-    { title: t("foot.Contact"), link: "/contact-us" },
+    { title: t("foot.Contact"), link: "/conatct-us" },
     { title: t("foot.FAQ"), link: "/faq" },
     {
       title: t("foot.ChannelPartner"),
@@ -179,7 +182,7 @@ const Foot = () => {
       </>
       <div className="flex flex-col w-full pt-12 pb-8 md:flex-row md:justify-between md:pt-24 md:pb-16">
         {/* Left Section */}
-        <div className="flex mb-12 hidden md:block">
+        <div className="mb-12 hidden md:block">
           <img
             className="w-auto h-[8rem] object-contain fill-[#40C2CC] cursor-pointer"
             src="/assets/Reef_Full_Logo.svg"
@@ -202,7 +205,7 @@ const Foot = () => {
                 <li key={index}>
                   <NavLink
                     to={item.link}
-                    className="nav-animate-link font-general text-nowrap text-xl font-medium text-black/80"
+                    className="nav-animate-link font-general text-xl font-medium text-black/80"
                   >
                     {item.title}
                   </NavLink>
@@ -320,7 +323,7 @@ const Foot = () => {
 
         <div className="flex-column w-full py-4 justify-center text-center md:justify-between md:flex">
           <span className="font-general text-sm text-black/40 text-center">
-            {t("foot.bottom.copyright")}
+            {`© ${new Date().getFullYear()} ${t("foot.bottom.copyright")}`}
           </span>
           <div className="space-x-4 mt-2 md:mt-0">
             <Link

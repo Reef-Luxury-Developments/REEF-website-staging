@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useTheme } from "../../theme/ThemeProvider";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../i18n/LanguageProvider";
 
 type Position = "left" | "right" | "bottom";
@@ -16,6 +16,7 @@ interface ImageData {
 const Destination: React.FC = () => {
   const theme = useTheme();
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const [isScroll, setIsScroll] = useState(false);
   const [active, setActive] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -23,11 +24,10 @@ const Destination: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "100px" });
 
-
-
   // === responsive check ===
   useEffect(() => {
-    const check = () => setIsMobile(typeof window !== "undefined" && window.innerWidth < 640);
+    const check = () =>
+      setIsMobile(typeof window !== "undefined" && window.innerWidth < 640);
     check();
     window.addEventListener("resize", check, { passive: true });
     return () => window.removeEventListener("resize", check);
@@ -53,21 +53,38 @@ const Destination: React.FC = () => {
   }, [isMobile]);
 
   const images: ImageData[] = [
-    { src: "/assets/left.png", position: "left", title: t("distination.DLRC"), paddingbottom: "62px" },
-    { src: "/assets/right.png", position: "right", title: t("distination.alfurjan"), paddingbottom: "62px" },
-    { src: "/assets/BG.png", position: "bottom", title: t("distination.DUBAIISLAND"), paddingbottom: "62px" },
-    { src: "/assets/bottom.jpg", position: "bottom", title: t("distination.IMPZ"), paddingbottom: "62px" },
+    {
+      src: "/assets/left.png",
+      position: "left",
+      title: t("distination.DLRC"),
+      paddingbottom: "62px",
+    },
+    {
+      src: "/assets/right.png",
+      position: "right",
+      title: t("distination.alfurjan"),
+      paddingbottom: "62px",
+    },
+    {
+      src: "/assets/bottom.jpg",
+      position: "bottom",
+      title: t("distination.DUBAIISLAND"),
+      paddingbottom: "62px",
+    },
+    {
+      src: "/assets/BG.png",
+      position: "bottom",
+      title: t("distination.IMPZ"),
+      paddingbottom: "62px",
+    },
   ];
 
   // =========================
   // MOBILE LAYOUT (slider)
   // =========================
   if (isMobile) {
-
     return (
-      <section
-        className="w-full my-8">
-
+      <section className="w-full my-8">
         <div className="flex flex-col items-center justify-center gap-10 mb-12">
           {/* Vertical divider (decorative) */}
           {/* <span
@@ -76,13 +93,10 @@ const Destination: React.FC = () => {
           ></span> */}
 
           {/* Title */}
-          <h2
-            className="uppercase text-[#0A181A] font-bodoni text-center text-[clamp(3rem,6vw,6rem)]"
-          >
+          <h2 className="uppercase text-[#0A181A] font-bodoni text-center text-[clamp(3rem,6vw,6rem)]">
             {t("distination.text")}
           </h2>
         </div>
-
 
         {/* Vertical Scrool  */}
         <div
@@ -94,7 +108,11 @@ const Destination: React.FC = () => {
               key={img.src}
               className="relative flex-shrink-0 w-[75%] overflow-hidden"
             >
-              <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+              <img
+                src={img.src}
+                alt={img.title}
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
               <div className="absolute bottom-8 w-full">
                 <h3
@@ -115,33 +133,30 @@ const Destination: React.FC = () => {
   // DESKTOP/TABLET (original)
   // =========================
   return (
-    <section
-      className="flex flex-col gap-24 items-center md:w-full md:px-8 lg:w-3/4 mx-auto md:py-24 transition-all duration-700">
-
+    <section className="flex flex-col gap-24 items-center md:w-full md:px-8 lg:w-3/4 mx-auto md:py-24 transition-all duration-700">
       {/* Header Content */}
       <div className="flex flex-col gap-8 items-center">
         {/* vertical line */}
         <span
-          className={`w-px h-16 md:h-40 bg-[#0A181A]/20 transition-transform duration-4000 ease-out ${isScroll ? "scale-y-100" : "scale-y-0"
-            }`}
+          className={`w-px h-16 md:h-40 bg-[#0A181A]/20 transition-transform duration-4000 ease-out ${
+            isScroll ? "scale-y-100" : "scale-y-0"
+          }`}
         ></span>
 
         {/* Title */}
-        <h2
-          className="uppercase text-[#0A181A] font-bodoni text-center text-[clamp(3rem,6vw,6rem)]"
-        >
+        <h2 className="uppercase text-[#0A181A] font-bodoni text-center text-[clamp(3rem,6vw,6rem)]">
           {t("distination.text")}
         </h2>
       </div>
 
       {/* Communities list */}
       <div className="flex w-full md:gap-4 lg:gap-8">
-
         {/* Start Shapes */}
-        <div ref={ref} className="relative flex overflow-hidden justify-center items-end mt-20 w-1/3 h-[42rem] group">
-          <p
-            className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out"
-          >
+        <div
+          ref={ref}
+          className="relative flex overflow-hidden justify-center items-end mt-20 w-1/3 h-[42rem] group"
+        >
+          <p className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out">
             {images[0].title}
           </p>
 
@@ -159,12 +174,12 @@ const Destination: React.FC = () => {
 
         {/* Middle Shapes */}
         <div className="flex flex-col md:gap-4 lg:gap-8 w-1/3">
-
           {/* First Shape */}
-          <div ref={ref} className="relative flex overflow-hidden justify-center items-end w-full h-[42rem] group">
-            <p
-              className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out"
-            >
+          <div
+            ref={ref}
+            className="relative flex overflow-hidden justify-center items-end w-full h-[42rem] group"
+          >
+            <p className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out">
               {images[1].title}
             </p>
 
@@ -180,10 +195,11 @@ const Destination: React.FC = () => {
             />
           </div>
           {/* Second Shape */}
-          <div ref={ref} className="relative flex overflow-hidden justify-center items-end w-full h-[42rem] group">
-            <p
-              className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out"
-            >
+          <div
+            ref={ref}
+            className="relative flex overflow-hidden justify-center items-end w-full h-[42rem] group"
+          >
+            <p className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out">
               {images[2].title}
             </p>
 
@@ -201,10 +217,11 @@ const Destination: React.FC = () => {
         </div>
 
         {/* End Shapes */}
-        <div ref={ref} className="relative flex overflow-hidden justify-center items-end mt-20 w-1/3 h-[42rem] group">
-          <p
-            className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out"
-          >
+        <div
+          ref={ref}
+          className="relative flex overflow-hidden justify-center items-end mt-20 w-1/3 h-[42rem] group"
+        >
+          <p className="text-white font-bodoni text-5xl text-center w-full p-12 z-[3] opacity-0 translate-y-[4rem] group-hover:translate-y-[0rem] group-hover:opacity-100 transition-all duration-500 ease-in-out">
             {images[3].title}
           </p>
 
@@ -220,7 +237,6 @@ const Destination: React.FC = () => {
           />
         </div>
       </div>
-
     </section>
   );
 };

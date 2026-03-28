@@ -367,7 +367,7 @@ export default function ProjectDetails() {
                   onMouseLeave={() => {
                     setVrButtonHover(false);
                   }}
-                  className={`group absolute top-[100%] left-1/2 md:left-0 translate-x-[-50%] translate-y-[-50%] bg-[#40C2CC]/30 rounded-full flex items-center justify-center size-[7.5rem] aspect-square ring-2 ring-white/10 shadow-[0_8px_0px_0_rgba(0,0,0,0)] hover:shadow-[0_21px_25px_0_#19A8B2] hover:ring-white/50  ${
+                  className={`z-[99] group absolute top-[100%] ltr:left-1/2 rtl:right-1/2 rtl:md:right-0 ltr:md:left-0 ltr:translate-x-[-50%] rtl:translate-x-[50%] translate-y-[-50%] bg-[#40C2CC]/30 rounded-full flex items-center justify-center size-[7.5rem] aspect-square ring-2 ring-white/10 shadow-[0_8px_0px_0_rgba(0,0,0,0)] hover:shadow-[0_21px_25px_0_#19A8B2] hover:ring-white/50  ${
                     vrButtonHover
                       ? "cursor-pointer backdrop-blur-[10px]"
                       : "backdrop-blur-[4px]"

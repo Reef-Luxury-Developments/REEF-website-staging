@@ -8,6 +8,7 @@ import RegisterSection from "../../components/registerSection";
 import ImageBlock from "../../components/ImageBlock";
 import Brand from "../../components/brand/brand";
 import Navbar from "../../components/Navbar";
+import ProjectsSlider from "../../components/projectsSlider";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <div className="z-0 max-sm:h-full  ">
         <Container />
         <LatestProject />
-        <Destination />
+        {/* <Destination /> */}
+        <ProjectsSlider />
         <RegisterSection source="home-page" />
         <ImageBlock />
         <Brand />

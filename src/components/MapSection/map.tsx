@@ -240,12 +240,7 @@ const Map = ({ data }: MapProps) => {
               <Marker
                 key={lm.id}
                 position={[lm.lat, lm.lng]}
-                icon={L.icon({
-                  iconUrl: lm.iconUrl || "/assets/Icon.svg",
-                  iconSize: [20, 20],
-                  iconAnchor: [10, 10],
-                  popupAnchor: [0, 0],
-                })}
+                icon={createLandmarkIcon(false)}
               >
                 <Popup>{lm.name}</Popup>
               </Marker>
@@ -258,6 +253,30 @@ const Map = ({ data }: MapProps) => {
 };
 
 export default Map;
+
+// Create custom landmark icon
+const createLandmarkIcon = (isActive: boolean) => {
+  return L.divIcon({
+    className: "bg-transparent",
+    html: `
+      <div class="relative flex flex-col items-center justify-center w-10 h-10 group">
+        <div class="relative flex items-center justify-center w-8 h-8 transition-transform duration-300 transform ${
+          isActive ? "scale-110" : "scale-100"
+        }">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="${
+            isActive ? "#40C2CC" : "#475569"
+          }" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full drop-shadow-md">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3" fill="white"></circle>
+          </svg>
+        </div>
+      </div>
+    `,
+    iconSize: [40, 40],
+    iconAnchor: [20, 38],
+    popupAnchor: [0, -40],
+  });
+};
 
 // Imperative helper to move/zoom the map when coords change
 const FlyToLocation = ({

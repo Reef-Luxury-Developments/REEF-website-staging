@@ -34,7 +34,7 @@ export default function Navbar({ isWhite }: { isWhite?: boolean }) {
   };
   const navigate = useNavigate();
   return (
-    <header className="relative z-[999999999999]">
+    <header className="relative z-[9998]">
       {/* <TopBar /> */}
       {/* Top navigation bar */}
       <nav className="sticky grid grid-cols-3 px-1 md:px-[1rem] py-[1rem] w-full">
@@ -63,8 +63,67 @@ export default function Navbar({ isWhite }: { isWhite?: boolean }) {
               {t("Navbar.menu")}
             </label>
           </button>
-        </div>
+         
 
+          {/* <div className="absolute w-12 start-0 top-0 z-[9999] cursor-pointer"
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+            trackEvent("menu_open", { menu_name: "Navbar menu" });
+          }}>
+
+          <div className="bg-[#40C2CC] w-full flex items-start justify-center pt-5">
+            <div className="text-white text-xl font-general font-medium tracking-widest uppercase "
+            style={{
+              writingMode: "sideways-lr",
+            }}
+            >{menuOpen ? "Close" : t("Navbar.menu")}</div>
+          </div>
+          <svg width="36" height="132" viewBox="0 0 36 132" fill="none" xmlns="http://www.w3.org/2000/svg"
+          
+          className="transform rtl:scale-x-[-1] w-full h-auto -mt-px"
+          >
+            <path d="M0.0337623 129.02C5.66938e-06 129.72 5.70228e-06 130.453 5.73398e-06 131.178L0 1.57973e-06L36 0C35.9747 13.5056 33.2658 26.8848 28.2869 39.4209L7.68777 91.3526C2.95359 103.374 0.244733 116.088 0.0337623 129.02Z" fill="#40C2CC"/>
+          </svg>
+
+          </div>
+        */}
+         {/* <div className="absolute w-10 start-0 top-0 z-[9999] cursor-pointer"
+          onClick={() => {
+            setMenuOpen(true);
+            trackEvent("menu_open", { menu_name: "Navbar menu" });
+          }}>
+          <svg width="36" height="132" viewBox="0 0 36 132" fill="none" xmlns="http://www.w3.org/2000/svg"
+          
+          className="transform rtl:scale-x-[-1] w-full h-auto -mb-px"
+          >
+            <path d="M0.0337623 2.15813C5.66938e-06 1.45841 5.70228e-06 0.725019 5.73398e-06 -3.8147e-06L0 131.178L36 131.178C35.9747 117.672 33.2658 104.293 28.2869 91.7572L7.68777 39.8255C2.95359 27.8037 0.244733 15.0905 0.0337623 2.15813Z" fill="#40C2CC"/>
+          </svg>
+
+          <button
+            
+            className=" text-white h-20 w-full overflow-hidden capitalize flex items-center justify-center  focus:outline-none focus-visible:ring-2 focus-visible:ring-none bg-[#40C2CC]"
+            aria-label={isArabic ? "فتح القائمة" : "Open menu"}
+          >
+            <label
+              className="font-sans rounded-full cursor-pointer -rotate-90 uppercase letter-spacing-widest"
+              style={{
+                fontWeight: 500,
+                fontSize: "1rem",
+                lineHeight: "1.5rem",
+              }}
+            >
+              {t("Navbar.menu")}
+            </label>
+          </button>
+          <svg width="36" height="132" viewBox="0 0 36 132" fill="none" xmlns="http://www.w3.org/2000/svg"
+          
+          className="transform rtl:scale-x-[-1] w-full h-auto -mt-px"
+          >
+            <path d="M0.0337623 129.02C5.66938e-06 129.72 5.70228e-06 130.453 5.73398e-06 131.178L0 1.57973e-06L36 0C35.9747 13.5056 33.2658 26.8848 28.2869 39.4209L7.68777 91.3526C2.95359 103.374 0.244733 116.088 0.0337623 129.02Z" fill="#40C2CC"/>
+          </svg>
+
+          </div> */}
+</div> 
         {/* Logo - Center */}
         <div className="flex justify-center items-center cursor-pointer">
           <div

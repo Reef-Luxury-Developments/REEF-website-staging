@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "../theme/ThemeProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageProvider";
@@ -8,6 +8,7 @@ import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
+import { sortProjectsByName } from "../utils/projectSorting";
 
 const defaultImages = [
   "/assets/Project-Image.png",
@@ -40,8 +41,14 @@ export default function LatestProject() {
     },
   });
 
-  const images = (projects && projects.length > 0)
-    ? projects.map((p) => p.coverImageUrl)
+  // Sort projects by number in project name (ascending), keep items without numbers in original order
+  const sortedProjects = useMemo(() => {
+    const arr: HomeProject[] = Array.isArray(projects) ? projects : [];
+    return sortProjectsByName(arr, (item) => item.projectName || "");
+  }, [projects]);
+
+  const images = (sortedProjects && sortedProjects.length > 0)
+    ? sortedProjects.map((p) => p.coverImageUrl)
     : defaultImages;
 
   const formatHandoverQuarter = (iso?: string) => {
@@ -134,7 +141,7 @@ export default function LatestProject() {
           {/* Project Card /00*/}
           <div className="w-full"
             onClick={() => {
-              const id = projects?.[0]?.id;
+              const id = sortedProjects?.[0]?.id;
               if (id) navigate(`/project-details/${id}`);
             }}
           >
@@ -157,17 +164,17 @@ export default function LatestProject() {
                   fontWeight: 500,
                 }}
               >
-                {projects?.[0]?.projectName || t("ProjectDetails.Reef")}
+                {sortedProjects?.[0]?.projectName || t("ProjectDetails.Reef")}
               </h3>
 
               <div className="flex gap-10 font-sans mt-1">
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("projects.card.handover")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(projects?.[0]?.handoverDate) || t("latestproject.date")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(sortedProjects?.[0]?.handoverDate) || t("latestproject.date")}</p>
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("ProjectDetails.Location")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{projects?.[0]?.area || t("distination.alfurjan")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{sortedProjects?.[0]?.area || t("distination.alfurjan")}</p>
                 </div>
               </div>
             </div>
@@ -176,7 +183,7 @@ export default function LatestProject() {
           {/* Project Card /01*/}
           <div className="w-full"
             onClick={() => {
-              const id = projects?.[1]?.id;
+              const id = sortedProjects?.[1]?.id;
               if (id) navigate(`/project-details/${id}`);
             }}
           >
@@ -199,17 +206,17 @@ export default function LatestProject() {
                   fontWeight: 500,
                 }}
               >
-                {projects?.[1]?.projectName || t("ProjectDetails.Reef")}
+                {sortedProjects?.[1]?.projectName || t("ProjectDetails.Reef")}
               </h3>
 
               <div className="flex gap-10 font-sans mt-1">
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("projects.card.handover")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(projects?.[1]?.handoverDate) || t("latestproject.date")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(sortedProjects?.[1]?.handoverDate) || t("latestproject.date")}</p>
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("ProjectDetails.Location")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{projects?.[1]?.area || t("distination.alfurjan")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{sortedProjects?.[1]?.area || t("distination.alfurjan")}</p>
                 </div>
               </div>
             </div>
@@ -218,7 +225,7 @@ export default function LatestProject() {
           {/* Project Card /02*/}
           <div className="w-full"
             onClick={() => {
-              const id = projects?.[2]?.id;
+              const id = sortedProjects?.[2]?.id;
               if (id) navigate(`/project-details/${id}`);
             }}
           >
@@ -241,17 +248,17 @@ export default function LatestProject() {
                   fontWeight: 500,
                 }}
               >
-                {projects?.[2]?.projectName || t("ProjectDetails.Reef")}
+                {sortedProjects?.[2]?.projectName || t("ProjectDetails.Reef")}
               </h3>
 
               <div className="flex gap-10 font-sans mt-1">
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("projects.card.handover")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(projects?.[2]?.handoverDate) || t("latestproject.date")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{formatHandoverQuarter(sortedProjects?.[2]?.handoverDate) || t("latestproject.date")}</p>
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="uppercase text-[#0A181A80] text-xs ">{t("ProjectDetails.Location")}</p>
-                  <p className="font-medium text-[#0A181A] text-lg">{projects?.[2]?.area || t("distination.alfurjan")}</p>
+                  <p className="font-medium text-[#0A181A] text-lg">{sortedProjects?.[2]?.area || t("distination.alfurjan")}</p>
                 </div>
               </div>
             </div>
@@ -282,7 +289,7 @@ export default function LatestProject() {
       role="button"
       tabIndex={0}
       onClick={() => {
-        const id = projects?.[currentImageIndex]?.id;
+        const id = sortedProjects?.[currentImageIndex]?.id;
         if (id) navigate(`/project-details/${id}`);
       }}
     >
@@ -292,16 +299,16 @@ export default function LatestProject() {
         <div className="flex gap-16">
 
           <h3 className="text-4xl font-bodoni text-white">
-            {(projects && projects[currentImageIndex]?.projectName) || t("ProjectDetails.Reef")}
+            {(sortedProjects && sortedProjects[currentImageIndex]?.projectName) || t("ProjectDetails.Reef")}
           </h3>
           <div className="flex gap-10 font-sans mt-1">
             <div className="flex flex-col gap-1">
               <p className="uppercase text-white/60 text-xs ">{t("latestproject.Handover")}</p>
-              <p className="text-white text-lg">{(projects && formatHandoverQuarter(projects[currentImageIndex]?.handoverDate)) || "Sep 2026"}</p>
+              <p className="text-white text-lg">{(sortedProjects && formatHandoverQuarter(sortedProjects[currentImageIndex]?.handoverDate)) || "Sep 2026"}</p>
             </div>
             <div className="flex flex-col gap-1">
               <p className="uppercase text-white/60 text-xs ">{t("ProjectDetails.Location")}</p>
-              <p className="text-white text-lg">{(projects && projects[currentImageIndex]?.area) || "Al Furjan"}</p>
+              <p className="text-white text-lg">{(sortedProjects && sortedProjects[currentImageIndex]?.area) || "Al Furjan"}</p>
             </div>
           </div>
         </div>

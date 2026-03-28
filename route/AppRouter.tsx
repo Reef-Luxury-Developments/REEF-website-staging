@@ -14,6 +14,9 @@ import ChannelPartne from "../src/pages/channel-partner";
 import PrivacyPolicy from "../src/pages/privacy-policy";
 import TermsAndConditions from "../src/pages/terms-conditions";
 import GTMPageTracker from "../src/components/GTMPageTracker";
+import Communities from "../src/pages/communities";
+import CommunityDetails from "../src/pages/community-details";
+import NotFound from "../src/pages/not-found";
 
 const AppRouter = () => {
   return (
@@ -23,16 +26,21 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/project-details/:id" element={<ProjectDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ConatctUs />} />
+        <Route path="/conatct-us" element={<ConatctUs />} />
         <Route path="/media-center" element={<MediaCenter />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/media-center/:id" element={<Blogs />} />
+        {/* <Route path="/communities" element={<Communities />} /> */}
+        {/* <Route path="/communities/:slug" element={<CommunityDetails />} /> */}
 
         <Route path="/project-all" element={<ProjectDetailsAll />} />
         <Route path="/channel-partner" element={<ChannelPartne />} />
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+        {/* Catch-all route for 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

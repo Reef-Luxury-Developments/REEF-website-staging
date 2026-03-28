@@ -15,6 +15,8 @@ import axios from "../../axios";
 import { Link, useNavigate } from "react-router-dom";
 import { MdApartment } from "react-icons/md";
 import { trackEvent } from "../../utils/analytics";
+import ProjectCard from "../../components/ProjectCard";
+import { sortProjectsByName } from "../../utils/projectSorting";
 
 // Helper to format handover date to Qx YYYY
 const formatHandoverQuarter = (s?: string) => {
@@ -34,7 +36,7 @@ const formatHandoverQuarter = (s?: string) => {
 const Index = () => {
   const [openIndex, setOpenIndex] = useState(0);
   const [selectedType, setSelectedType] = useState<number | undefined>(
-    undefined,
+    undefined
   );
   const unitTypes = [
     { name: "Apartment", value: 0 },
@@ -42,7 +44,7 @@ const Index = () => {
     { name: "Townhouse", value: 2 },
   ];
   const [selectedRoom, setSelectedRoom] = useState<number | undefined>(
-    undefined,
+    undefined
   );
   const roomOptions = [
     { name: "Studio", value: 1 },
@@ -52,7 +54,7 @@ const Index = () => {
     { name: "FourRooms", value: 5 },
   ];
   const [selectedSort, setSelectedSort] = useState<number | undefined>(
-    undefined,
+    undefined
   );
   const sortOptions = [
     { name: "Nearest Handover", value: 0 },
@@ -125,7 +127,12 @@ const Index = () => {
 
   const projects = useMemo(() => {
     const arr: any[] = Array.isArray(projectsRes) ? projectsRes : [];
-    return arr.map((item) => ({
+
+    // Sort projects by name first
+    const sortedItems = sortProjectsByName(arr, (item) => item.name || "");
+
+    // Then transform to match ProjectCard props
+    return sortedItems.map((item) => ({
       image: item.coverImageUrl,
       id: item.id,
       name: item.name,
@@ -163,7 +170,7 @@ const Index = () => {
           : item?.questions || "",
         content: item?.answer || "",
       })),
-    [faqsData],
+    [faqsData]
   );
 
   return (
@@ -378,7 +385,7 @@ const Index = () => {
           </p>
           <div className="flex w-full justify-start">
             <Link
-              to="/contact-us"
+              to="/conatct-us"
               className="font-general text-lg text-[#40C2CC] font-medium hover:underline hover:text-[#30AEB8]"
             >
               {t("faqSection.contact")}
@@ -395,7 +402,7 @@ const Index = () => {
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
               >
                 {/* Header */}
-                <div className="flex justify-between md:items-center md:items-center cursor-pointer gap-8">
+                <div className="flex justify-between md:items-center cursor-pointer gap-8">
                   <h3
                     className="
                   font-general text-[#0A181A] text-2xl font-medium
@@ -448,89 +455,3 @@ const Index = () => {
 };
 
 export default Index;
-
-// -------- ProjectCard --------
-const ProjectCard = ({ project }: any) => {
-  const { t } = useLanguage();
-  const navigate = useNavigate();
-  // console.log(project)
-
-  return (
-    <div
-      className="cursor-pointer group"
-      onClick={() => {
-        navigate(`/project-details/${project.id}`);
-        trackEvent("project_click", {
-          project_name: project.name,
-          project_id: project.id,
-        });
-      }}
-    >
-      {/* Image Section */}
-      <div className="relative overflow-hidden">
-        {/* Image */}
-        <img
-          src={project.image}
-          alt={project.name}
-          className="w-full object-cover"
-        />
-        {/* Hover Overlay */}
-        <div
-          className="
-          flex justify-center items-center
-          absolute bottom-0 left-0 w-full h-full 
-          bg-[#40C2CC]
-          group-hover:translate-y-0
-          translate-y-full
-          transition-transform duration-1000 ease-in-out z-10"
-        >
-          <span className="text-white font-bodoni uppercase text-[clamp(2rem,2vw,3rem)]">
-            {t("projects.viewProject")}
-          </span>
-        </div>
-      </div>
-
-      {/* Card Content */}
-      <div className="flex flex-col gap-2 py-4">
-        {/* Handover Date */}
-        <div className="flex items-center gap-4 font-general text-sm text-[#0A181A]/50 uppercase">
-          <span>{t("projects.card.handover")}</span>
-          <span className="bg-[#0A181A]/15 h-[1px] flex-1"></span>
-          <span>{project.handover}</span>
-        </div>
-
-        {/* Project Name */}
-        <h3 className="font-bodoni uppercase text-[clamp(2rem,2vw,3rem)] text-[#0A181A]">
-          {project.name}
-        </h3>
-
-        {/* Details */}
-        <div className="flex flex-col gap-1 font-general tex-sm">
-          {/* Location */}
-          <div className="flex gap-2 items-start md:items-center">
-            <CiLocationOn className="text-[#0A181A]/50 mt-1 md:mt-0" />
-            <span className="text-[#0A181A]/55">{project.location}</span>
-          </div>
-
-          {/* Configration */}
-          <div className="flex gap-2 items-start md:items-center">
-            <PiBed className="fill-[#0A181A]/30 mt-1 md:mt-0" />
-            <div className="flex gap-0 md:gap-1 text-[#0A181A]/55 flex-wrap">
-              {Array.isArray(project.congregationContent) &&
-              project.congregationContent.length > 0
-                ? project.congregationContent.map(
-                    (text: string, i: number, arr: string[]) => (
-                      <div key={i}>
-                        {text}
-                        {i % 2 === 0 && i !== arr.length - 1 ? "," : ""}
-                      </div>
-                    ),
-                  )
-                : null}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};

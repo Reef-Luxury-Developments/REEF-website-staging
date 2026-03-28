@@ -1,12 +1,18 @@
 {
   "menu": {
-    "home": "HOME",
-    "projects": "PROJECTS",
-    "ourStory": "OUR STORY",
-    "labelText": "LABEL TEXT",
-    "contact": "CONTACT US",
-    "faq": "FAQs",
-    "media_center": "MEDIA CENTER"
+    "home": "home",
+    "projects": "projects",
+    "communities": "communities",
+    "ourStory": "our story",
+    "labelText": "label text",
+    "contact": "contact us",
+    "faq": "FAQ's",
+    "media_center": "media center"
+  },
+  "home": {
+    "projectsSlider": {
+      "title": "Our Projects"
+    }
   },
   "about": {
     "Get_in_touch": "Contact Us",
@@ -208,9 +214,10 @@
     "alfurjan": "AL FURJAN",
     "DLRC": "DLRC",
     "DUBAIISLAND": "DUBAI ISLANDS",
-    "IMPZ": "IMPZ"
+    "IMPZ": "DUBAI PRODUCTION CITY"
   },
   "foot": {
+    "Communities": "Communities",
     "leftsectiontext": "join our newsletter to recieve \n latest projects and content",
     "imagetext": "by signing up to recieve emails from reef luxury developement ypu agree to our",
     "privacy": "Privacy Policy",
@@ -231,7 +238,7 @@
       "terms": "TERMS",
       "cookiePolicy": "COOKIE POLICY",
       "sitemap": "SITEMAP",
-      "copyright": "© 2025 REEF LUXURY DEVELOPMENTS. ALL RIGHTS RESERVED."
+      "copyright": " REEF LUXURY DEVELOPMENTS. ALL RIGHTS RESERVED."
     },
     "card": {
       "altTopDecoration": "Top decoration",
@@ -274,7 +281,28 @@
   },
   "common": {
     "close": "Close",
-    "all": "All"
+    "all": "All",
+    "communityNotFound": "Community Not Found",
+    "communityNotFoundDesc": "The community you're looking for doesn't exist or has been removed.",
+    "backToCommunities": "Back to Communities",
+    "projects": "Projects",
+    "readLess": "Hide",
+    "readMore": "Read More",
+    "minutes": "Mins"
+  },
+  "communities": {
+    "title": "Communities",
+    "description": "At REEF Luxury Developments, exceptional living begins with clear vision and strategic planning. We select future-ready communities defined by strong rental yields, resale value, connectivity, and long-term investment potential, guided by deep market insight and evolving resident needs, creating locations where daily life is elevated, and long-term value continues to grow.",
+    "viewCommunity": "View Community"
+  },
+  "communityDetails": {
+    "locationTitle": "Prime Location & Connectivity",
+    "uniquenessTitle": "What Makes This Community Unique?",
+    "ctaTitle": "Find Your Dream Home",
+    "ctaDescription": "A community defined by convenience, value, and long-term growth.",
+    "projectsTitle": "Our Projects in",
+    "noProjects": "No projects found for this community.",
+    "landmarksListTitle": "Minutes Away From Major destinations Such As"
   },
   "projectdetailsimage": {
     "header": "Your outdoor space. A serene retreat, every season.",
@@ -1074,7 +1102,7 @@
           }
         ]
       },
-        {
+      {
         "title": "21. ONLINE PAYMENTS",
         "content": [
           {

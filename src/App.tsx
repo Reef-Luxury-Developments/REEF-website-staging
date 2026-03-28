@@ -20,6 +20,7 @@ const tagManagerArgs = {
 };
 
 // Initialize GTM once, outside component
+// TODO: Uncomment GTM before deploying to production
 if (typeof window !== "undefined") {
   const gtmScript = document.querySelector(
     'script[src*="googletagmanager.com/gtm.js"]'
