@@ -102,6 +102,14 @@ export default function ContactCards({ items }: any) {
     <section className="grid grid-cols-1 gap-4 w-full py-12 px-4 lg:grid-cols-4 md:grid-cols-2 md:px-0  md:py-24 md:w-5/6 md:mx-auto">
       {data.map((item: any, idx: number) => {
         const href = getHref(item.link?.href);
+        const isLast = idx === data.length - 1;
+        const isSecondToLast = idx === data.length - 2;
+        const needsContainer = isLast || isSecondToLast;
+        const labelFontClass = isLast
+          ? "[font-size:clamp(0.2rem,5.6cqi,1rem)]"
+          : isSecondToLast
+            ? "[font-size:clamp(0.2rem,7cqi,1rem)]"
+            : "text-md";
         return (
           <a
             key={idx}
@@ -109,7 +117,7 @@ export default function ContactCards({ items }: any) {
             href={href}
             target={isExternal(href) ? "_blank" : undefined}
             rel={isExternal(href) ? "noopener noreferrer" : undefined}
-            className="w-full px-6 py-6 rounded-2xl border border-[#0A181A]/15 transition-all ease-in-out duration-300 hover:bg-[#40C2CC] hover:border-[#40C2CC] group"
+            className={`${needsContainer ? "[container-type:inline-size] " : ""}w-full px-6 py-6 rounded-2xl border border-[#0A181A]/15 transition-all ease-in-out duration-300 hover:bg-[#40C2CC] hover:border-[#40C2CC] group`}
           >
             <div className="text-[#40C2CC] group-hover:text-white">
               {item.icon}
@@ -125,7 +133,7 @@ export default function ContactCards({ items }: any) {
             <div className="flex flex-col mt-4 items-start">
               {item.link?.label && (
                 <span
-                  className="text-md font-general text-[#40C2CC] group-hover:text-white group-hover:italic "
+                  className={`${labelFontClass} font-general text-[#40C2CC] group-hover:text-white group-hover:italic `}
                   dir={item.link.dir}
                 >
                   {item.link.label}

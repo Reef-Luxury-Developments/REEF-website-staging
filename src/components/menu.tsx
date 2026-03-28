@@ -10,7 +10,8 @@ const MENU_ITEMS = [
   { labelKey: "menu.home", href: "/" },
   { labelKey: "menu.projects", href: "/project-all" },
   // { labelKey: "menu.media_center", href: "/media-center" },
-  { labelKey: "menu.communities", href: "/communities" },
+  // TODO: uncomment when communities are ready
+  // { labelKey: "menu.communities", href: "/communities" },
 
   { labelKey: "menu.ourStory", href: "/aboutus" },
   { labelKey: "menu.contact", href: "/conatct-us" },
@@ -56,12 +57,12 @@ export default function FullscreenMenuOverlay({
   // Set document and body backgrounds
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     // Set document background to teal (menu color)
     document.documentElement.style.backgroundColor = "#40C2CC";
     // Set body background to white
     document.body.style.backgroundColor = "white";
-    
+
     return () => {
       // Reset on unmount if needed
       document.documentElement.style.backgroundColor = "";
@@ -72,7 +73,7 @@ export default function FullscreenMenuOverlay({
   // Create menu container in documentElement for portal (outside transformed body)
   useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     let menuContainer = document.getElementById("menu-portal-container");
     if (!menuContainer) {
       menuContainer = document.createElement("div");
@@ -86,10 +87,10 @@ export default function FullscreenMenuOverlay({
       menuContainer.style.pointerEvents = "none"; // Allow clicks to pass through to overlay
       document.documentElement.appendChild(menuContainer);
     }
-    
+
     // Update pointer events based on menu state (keep none so overlay is clickable)
     // menuContainer.style.pointerEvents = open ? "auto" : "none";
-    
+
     return () => {
       // Don't remove on unmount, keep it for future use
     };
@@ -100,14 +101,18 @@ export default function FullscreenMenuOverlay({
     if (open) {
       const updateTransform = () => {
         const menuWidth = window.innerWidth <= 640 ? window.innerWidth : 280;
-        const transformValue = isArabic ? `translateX(-${menuWidth}px)` : `translateX(${menuWidth}px)`;
+        const transformValue = isArabic
+          ? `translateX(-${menuWidth}px)`
+          : `translateX(${menuWidth}px)`;
         // Transform body to reveal html background
         document.documentElement.style.overflowX = "hidden";
         document.body.style.transform = transformValue;
         document.body.style.transition = "transform 0.4s ease-out";
-        
+
         // Also transform the backdrop overlay to shift with body
-        const overlay = document.querySelector('[data-menu-overlay]') as HTMLElement;
+        const overlay = document.querySelector(
+          "[data-menu-overlay]",
+        ) as HTMLElement;
         if (overlay) {
           // overlay.style.transform = transformValue;
           overlay.style.transition = "transform 0.4s ease-out";
@@ -125,7 +130,9 @@ export default function FullscreenMenuOverlay({
         const menuWidth = window.innerWidth <= 640 ? window.innerWidth : 280;
         document.body.style.transform = "";
         document.body.style.transition = "transform 0.4s ease-out";
-        const overlay = document.querySelector('[data-menu-overlay]') as HTMLElement;
+        const overlay = document.querySelector(
+          "[data-menu-overlay]",
+        ) as HTMLElement;
         if (overlay) {
           overlay.style.transform = "";
           overlay.style.transition = "transform 0.4s ease-out";
@@ -145,16 +152,16 @@ export default function FullscreenMenuOverlay({
         <motion.div
           data-menu-overlay
           className="fixed inset-0 z-[9999999] backdrop-blur-[3px]"
-          style={{ 
-            pointerEvents: 'auto',
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            maskImage: isArabic 
+          style={{
+            pointerEvents: "auto",
+            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            maskImage: isArabic
               ? "linear-gradient(to left, black 5%, transparent 20%)"
               : "linear-gradient(to right, black 10%, transparent 50%)",
-            WebkitMaskImage: isArabic 
+            WebkitMaskImage: isArabic
               ? "linear-gradient(to left, black 5%, transparent 20%)"
               : "linear-gradient(to right, black 10%, transparent 50%)",
-           }}
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -178,7 +185,7 @@ export default function FullscreenMenuOverlay({
             aria-label="Main menu"
             dir={isArabic ? "rtl" : "ltr"}
             className="fixed inset-y-0 start-0 z-[999]"
-            style={{ pointerEvents: 'auto' }}
+            style={{ pointerEvents: "auto" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -188,96 +195,96 @@ export default function FullscreenMenuOverlay({
           >
             {/* Menu area - html background shows through here */}
 
-          {/* Content */}
-          <div className="relative h-full w-[280px] max-sm:w-full flex flex-col">
-            {/* Close button */}
-            <div className="absolute top-6 start-4 z-[9999] max-sm:start-4">
-              <IoCloseSharp
-                onClick={onClose}
-                className="cursor-pointer text-white text-3xl hover:opacity-80 transition-opacity"
-              />
-            </div>
+            {/* Content */}
+            <div className="relative h-full w-[280px] max-sm:w-full flex flex-col">
+              {/* Close button */}
+              <div className="absolute top-6 start-4 z-[9999] max-sm:start-4">
+                <IoCloseSharp
+                  onClick={onClose}
+                  className="cursor-pointer text-white text-3xl hover:opacity-80 transition-opacity"
+                />
+              </div>
 
-            {/* Menu items */}
-            <nav
-              aria-label={isArabic ? "القائمة الرئيسية" : "Main"}
-              className="flex-1 relative flex flex-col justify-start items-start px-5 pt-20 pb-5 text-start select-none overflow-y-auto "
-            >
-              <motion.ul 
-                key={`menu-list-${open}`}
-                className="space-y-2.5 w-full"
+              {/* Menu items */}
+              <nav
+                aria-label={isArabic ? "القائمة الرئيسية" : "Main"}
+                className="flex-1 relative flex flex-col justify-start items-start px-5 pt-20 pb-5 text-start select-none overflow-y-auto "
               >
-                {list.map((item, index) => (
-                  <motion.li 
-                    key={item.labelKey} 
-                    className=""
-                    initial={{ 
-                      opacity: 0, 
-                      x: -20 
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      ease: "easeOut",
-                      delay: index * 0.1, // Each item starts 0.2s after previous (overlaps since duration is 0.3s)
-                    }}
-                  >
-                    <NavLink
-                      to={item.href}
-                      onClick={onClose}
-                      className="inline-block transition-all duration-300 ease-in-out hover:text-[#FFFFFF8F] font-bodoni text-3xl md:text-3xl font-medium text-white uppercase"
+                <motion.ul
+                  key={`menu-list-${open}`}
+                  className="space-y-2.5 w-full"
+                >
+                  {list.map((item, index) => (
+                    <motion.li
+                      key={item.labelKey}
+                      className=""
+                      initial={{
+                        opacity: 0,
+                        x: -20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeOut",
+                        delay: index * 0.1, // Each item starts 0.2s after previous (overlaps since duration is 0.3s)
+                      }}
                     >
-                      {String(t(item.labelKey))}
-                    </NavLink>
-                  </motion.li>
-                ))}
-              </motion.ul>
+                      <NavLink
+                        to={item.href}
+                        onClick={onClose}
+                        className="inline-block transition-all duration-300 ease-in-out hover:text-[#FFFFFF8F] font-bodoni text-3xl md:text-3xl font-medium text-white uppercase"
+                      >
+                        {String(t(item.labelKey))}
+                      </NavLink>
+                    </motion.li>
+                  ))}
+                </motion.ul>
 
-              {/* Mobile-only callout under menu */}
-              <div className="mt-auto pt-8 max-sm:block w-full">
-                <div className=" text-white">
-                  {/* <h3 className="font-bodoni text-xl md:text-3xl uppercase leading-none mb-2 tracking-tight">
+                {/* Mobile-only callout under menu */}
+                <div className="mt-auto pt-8 max-sm:block w-full">
+                  <div className=" text-white">
+                    {/* <h3 className="font-bodoni text-xl md:text-3xl uppercase leading-none mb-2 tracking-tight">
                     {t("register.title")}
                   </h3> */}
-                  <motion.div 
-                    initial={{ 
-                      opacity: 0, 
-                      x: -20 
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0,
-                    }}
-                    transition={{
-                      duration: 0.3,
-                      ease: "easeOut",
-                      delay: list.length * 0.1,
-                    }}
-                  >
-                    <NavLink
-                      to="/conatct-us"
-                      onClick={onClose}
-                      className="inline-flex mt-4 items-center gap-3 bg-white border border-white rounded-full ps-4 pe-4 py-2 hover:bg-white/90 transition-colors"
+                    <motion.div
+                      initial={{
+                        opacity: 0,
+                        x: -20,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        x: 0,
+                      }}
+                      transition={{
+                        duration: 0.3,
+                        ease: "easeOut",
+                        delay: list.length * 0.1,
+                      }}
                     >
-                      <span className="font-sans font-semibold text-[#40C2CC]">
-                        {t("about.Get_in_touch")}
-                      </span>
-                      <span
-                        className="w-9 h-9 rounded-full flex items-center justify-center"
-                        style={{ background: "#40C2CC" }}
+                      <NavLink
+                        to="/conatct-us"
+                        onClick={onClose}
+                        className="inline-flex mt-4 items-center gap-3 bg-white border border-white rounded-full ps-4 pe-4 py-2 hover:bg-white/90 transition-colors"
                       >
-                        <GoArrowUpRight className="text-white text-xl" />
-                      </span>
-                    </NavLink>
-                  </motion.div>
+                        <span className="font-sans font-semibold text-[#40C2CC]">
+                          {t("about.Get_in_touch")}
+                        </span>
+                        <span
+                          className="w-9 h-9 rounded-full flex items-center justify-center"
+                          style={{ background: "#40C2CC" }}
+                        >
+                          <GoArrowUpRight className="text-white text-xl" />
+                        </span>
+                      </NavLink>
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
-            </nav>
-          </div>
-        </motion.div>
+              </nav>
+            </div>
+          </motion.div>
         </>
       ) : null}
     </AnimatePresence>
@@ -287,7 +294,7 @@ export default function FullscreenMenuOverlay({
   // Render menu content via portal to container outside transformed context
   if (typeof window === "undefined") return null;
   const menuContainer = document.getElementById("menu-portal-container");
-  
+
   return (
     <>
       {createPortal(overlayContent, document.body)}

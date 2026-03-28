@@ -90,7 +90,9 @@ const Foot = () => {
   const links = [
     { title: t("foot.Home"), link: "/" },
     { title: t("foot.Project"), link: "/project-all" },
-    { title: t("foot.Communities"), link: "/communities" },
+
+    // TODO: uncomment when communities are ready
+    // { title: t("foot.Communities"), link: "/communities" },
     { title: t("foot.About"), link: "/aboutus" },
     // { title: t("foot.News"), link: "/media-center" },
     { title: t("foot.Contact"), link: "/conatct-us" },

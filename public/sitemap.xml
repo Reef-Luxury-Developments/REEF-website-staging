@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/aboutus</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/project-all</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/media-center</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/faq</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/channel-partner</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/conatct-us</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/privacy-policy</loc>
+  </url>
+
+  <url>
+    <loc>https://www.reefdevelopments.ae/terms-and-conditions</loc>
+  </url>
+
+</urlset>

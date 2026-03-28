@@ -30,8 +30,8 @@ const AppRouter = () => {
         <Route path="/media-center" element={<MediaCenter />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/media-center/:id" element={<Blogs />} />
-        <Route path="/communities" element={<Communities />} />
-        <Route path="/communities/:slug" element={<CommunityDetails />} />
+        {/* <Route path="/communities" element={<Communities />} /> */}
+        {/* <Route path="/communities/:slug" element={<CommunityDetails />} /> */}
 
         <Route path="/project-all" element={<ProjectDetailsAll />} />
         <Route path="/channel-partner" element={<ChannelPartne />} />
