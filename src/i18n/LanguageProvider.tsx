@@ -128,6 +128,11 @@ const getNestedValue = (obj: any, path: string): any => {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<SupportedLanguage>(() => {
+    if (
+      typeof window !== "undefined" &&
+      window.location.pathname.startsWith("/ar")
+    )
+      return "ar";
     const saved =
       typeof window !== "undefined"
         ? (localStorage.getItem("lang") as SupportedLanguage | null)

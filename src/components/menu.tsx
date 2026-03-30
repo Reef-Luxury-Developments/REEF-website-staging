@@ -7,15 +7,15 @@ import { IoCloseSharp } from "react-icons/io5";
 import { GoArrowUpRight } from "react-icons/go";
 
 const MENU_ITEMS = [
-  { labelKey: "menu.home", href: "/" },
-  { labelKey: "menu.projects", href: "/project-all" },
-  // { labelKey: "menu.media_center", href: "/media-center" },
+  { labelKey: "menu.home", path: "/" },
+  { labelKey: "menu.projects", path: "/project-all" },
+  // { labelKey: "menu.media_center", path: "/media-center" },
   // TODO: uncomment when communities are ready
-  // { labelKey: "menu.communities", href: "/communities" },
+  // { labelKey: "menu.communities", path: "/communities" },
 
-  { labelKey: "menu.ourStory", href: "/aboutus" },
-  { labelKey: "menu.contact", href: "/conatct-us" },
-  { labelKey: "menu.faq", href: "/faq" },
+  { labelKey: "menu.ourStory", path: "/aboutus" },
+  { labelKey: "menu.contact", path: "/conatct-us" },
+  { labelKey: "menu.faq", path: "/faq" },
 ];
 
 export default function FullscreenMenuOverlay({
@@ -27,7 +27,8 @@ export default function FullscreenMenuOverlay({
   onClose: () => void;
   isArabic: boolean;
 }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const localePrefix = language === "ar" ? "/ar" : "";
   // Prevent background scroll when menu is open
   useEffect(() => {
     if (open) {
@@ -233,7 +234,7 @@ export default function FullscreenMenuOverlay({
                       }}
                     >
                       <NavLink
-                        to={item.href}
+                        to={`${localePrefix}${item.path}`}
                         onClick={onClose}
                         className="inline-block transition-all duration-300 ease-in-out hover:text-[#FFFFFF8F] font-bodoni text-3xl md:text-3xl font-medium text-white uppercase"
                       >
@@ -265,7 +266,7 @@ export default function FullscreenMenuOverlay({
                       }}
                     >
                       <NavLink
-                        to="/conatct-us"
+                        to={`${localePrefix}/conatct-us`}
                         onClick={onClose}
                         className="inline-flex mt-4 items-center gap-3 bg-white border border-white rounded-full ps-4 pe-4 py-2 hover:bg-white/90 transition-colors"
                       >
