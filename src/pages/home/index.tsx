@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "../../components/HeroSection";
-import Frame from "../../components/Frame";
 import Container from "../../components/container";
 import LatestProject from "../../components/LatestProject";
 import Destination from "../../components/Destination";

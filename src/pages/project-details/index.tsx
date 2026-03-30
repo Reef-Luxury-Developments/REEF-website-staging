@@ -12,7 +12,6 @@ import LobbySlider from "../../components/loop-slider/LobbySlider";
 import LatestSlider from "../../components/loop-slider/LatestSlider";
 import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
-import CoverImage from "../../components/ProjectDetails/cover-imagr";
 import { useLanguage } from "../../i18n/LanguageProvider";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";

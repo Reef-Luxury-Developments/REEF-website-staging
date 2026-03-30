@@ -3,11 +3,27 @@ import { useTheme } from "../theme/ThemeProvider";
 import { useLanguage } from "../i18n/LanguageProvider";
 import Navbar from "../components/Navbar";
 
+function useIsDesktop(): boolean {
+  const [isDesktop, setIsDesktop] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(min-width: 768px)").matches,
+  );
 
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  return isDesktop;
+}
 
 export default function HeroSection() {
   const theme = useTheme();
   const { t } = useLanguage();
+  const isDesktop = useIsDesktop();
 
   const [showLine, setShowLine] = useState(false);
   const [showRightText, setShowRightText] = useState(false);
@@ -19,12 +35,11 @@ export default function HeroSection() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        // Autoplay was prevented.
+      videoRef.current.play().catch((error) => {
         console.error("Video autoplay was prevented:", error);
       });
     }
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
     const t1 = setTimeout(() => setShowLine(true), 300);
@@ -42,17 +57,19 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col justify-between h-[50rem] md:h-screen mb-24">
-
+      className="relative flex flex-col justify-between h-[50rem] md:h-screen mb-24"
+    >
       <Navbar isWhite={true} />
 
       {/* Right: Divider + supporting text */}
       <div className="flex flex-col items-center justify-center gap-4 w-full px-16 md:px-0 md:w-1/4 mx-auto mb-16 z-[4]">
-
         {/* Supporting text */}
         <p
-          className={`italic font-general text-white text-center text-lg transition-all duration-500 ease-out ${showRightText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-            }`}
+          className={`italic font-general text-white text-center text-lg transition-all duration-500 ease-out ${
+            showRightText
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2"
+          }`}
         >
           {t("heroSection.ReefText")}
         </p>
@@ -60,37 +77,33 @@ export default function HeroSection() {
         {/* Divider */}
         <div className="hidden md:block md:mt-[0.75rem]">
           <div
-            className={`h-16 w-px bg-gray-200/80 transition-all duration-500 ease-out ${showLine ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-              }`}
+            className={`h-16 w-px bg-gray-200/80 transition-all duration-500 ease-out ${
+              showLine ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+            }`}
           ></div>
         </div>
       </div>
 
-
       {/* Background video (slides up + fades in) */}
       <div
-        className={`absolute h-full inset-0 transition-all duration-500 ease-out will-change-transform will-change-opacity ${showFrame ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-          }`}
+        className={`absolute h-full inset-0 transition-all duration-500 ease-out will-change-transform will-change-opacity ${
+          showFrame ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        }`}
       >
         <video
+          key={isDesktop ? "desktop" : "mobile"}
           ref={videoRef}
-          className="hidden md:block w-full h-full object-cover object-bottom"
-          src="/assets/Home_Hero_Video.mp4"
+          className="w-full h-full object-cover object-bottom"
+          src={
+            isDesktop
+              ? `https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/video/Home+Hero+Video.mp4`
+              : `https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/video/Home+Hero+Video+Mobile.mp4`
+          }
           autoPlay
           loop
           muted
           playsInline
-          poster="/assets/home-hero-placeholder.webp"
-        />
-        <video
-          ref={videoRef}
-          className="md:hidden w-full h-full object-cover object-bottom"
-          src="/assets/Home_Hero_Video_Mobile.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/assets/home-hero-placeholder.webp"
+          poster={`https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/home-hero-placeholder.webp`}
         />
       </div>
     </section>
