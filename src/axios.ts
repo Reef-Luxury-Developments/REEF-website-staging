@@ -1,7 +1,6 @@
 import Axios, {
   AxiosInstance,
   AxiosResponse,
-  InternalAxiosRequestConfig,
 } from "axios";
 import { toast } from "react-toastify";
 import { QueryClient } from "@tanstack/react-query";

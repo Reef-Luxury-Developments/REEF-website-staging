@@ -1,16 +1,13 @@
 import React from "react";
-import { useTheme } from "../../theme/ThemeProvider";
 import Navbar from "../../components/Navbar";
-import { GoArrowDownLeft } from "react-icons/go";
 import RegisterSection from "../../components/registerSection";
 import { useLanguage } from "../../i18n/LanguageProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import Tab from "../../components/brand/tab";
 
 export default function AboutUs() {
-  const theme = useTheme();
   const { t } = useLanguage();
   const navigate = useNavigate();
   const { data: aboutData, isLoading: aboutLoading } = useQuery({

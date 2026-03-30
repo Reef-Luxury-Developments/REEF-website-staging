@@ -2,11 +2,9 @@ import React from "react";
 import HeroSection from "../../components/HeroSection";
 import Container from "../../components/container";
 import LatestProject from "../../components/LatestProject";
-import Destination from "../../components/Destination";
 import RegisterSection from "../../components/registerSection";
 import ImageBlock from "../../components/ImageBlock";
 import Brand from "../../components/brand/brand";
-import Navbar from "../../components/Navbar";
 import ProjectsSlider from "../../components/projectsSlider";
 
 export default function Home() {

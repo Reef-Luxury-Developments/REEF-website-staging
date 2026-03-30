@@ -6,7 +6,6 @@ import { LanguageProvider } from "./i18n/LanguageProvider";
 import ScrollToTop from "./components/footer/ScrollToTop";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
-import { useEffect } from "react";
 import { setQueryClient } from "./axios";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import TagManager from "react-gtm-module";

@@ -1,12 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "../theme/ThemeProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageProvider";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../axios";
 import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
-import { MdOutlineArrowRightAlt } from "react-icons/md";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { sortProjectsByName } from "../utils/projectSorting";
 

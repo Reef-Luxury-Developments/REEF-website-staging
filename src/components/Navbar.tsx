@@ -1,6 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
 // If you already have these in your project, keep them as-is
 import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
 import { useTheme } from "../theme/ThemeProvider";
