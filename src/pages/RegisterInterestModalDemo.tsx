@@ -9,6 +9,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { CountryCodes } from "../components/country";
 import { useRecaptchaToken } from "../hooks/useRecaptchaToken";
 import { trackEvent } from "../utils/analytics";
+import RecaptchaProvider from "../components/RecaptchaProvider";
 
 export default function RegisterInterestModalDemo({
   trigger,
@@ -73,11 +74,13 @@ export default function RegisterInterestModalDemo({
 
       {open
         ? createPortal(
-            <RegisterInterestModal
-              open={open}
-              onClose={() => setOpen(false)}
-              project_name={project_name}
-            />,
+            <RecaptchaProvider>
+              <RegisterInterestModal
+                open={open}
+                onClose={() => setOpen(false)}
+                project_name={project_name}
+              />
+            </RecaptchaProvider>,
             document.body
           )
         : null}

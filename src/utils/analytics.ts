@@ -7,24 +7,26 @@ declare global {
   }
 }
 
+function ensureDataLayer() {
+  if (typeof window === "undefined") return false;
+  window.dataLayer = window.dataLayer || [];
+  return true;
+}
+
 // 2. Generic Event Tracker
 export const trackEvent = (
   eventName: string,
-  params: Record<string, any> = {}
+  params: Record<string, any> = {},
 ) => {
-  if (typeof window !== "undefined" && window.dataLayer) {
-    const eventData = {
-      event: eventName,
-      ...params,
-    };
-    window.dataLayer.push(eventData);
+  if (!ensureDataLayer()) return;
+  const eventData = {
+    event: eventName,
+    ...params,
+  };
+  window.dataLayer.push(eventData);
 
-    // Debug logging (remove in production if needed)
-    if (import.meta.env.DEV) {
-      console.log("📊 GTM Event pushed:", eventData);
-    }
-  } else {
-    console.warn("GTM dataLayer not found");
+  if (import.meta.env.DEV) {
+    console.log("📊 GTM Event pushed:", eventData);
   }
 };
 

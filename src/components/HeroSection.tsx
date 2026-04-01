@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { useTheme } from "../theme/ThemeProvider";
 import { useLanguage } from "../i18n/LanguageProvider";
 import Navbar from "../components/Navbar";
 
@@ -21,7 +20,6 @@ function useIsDesktop(): boolean {
 }
 
 export default function HeroSection() {
-  const theme = useTheme();
   const { t } = useLanguage();
   const isDesktop = useIsDesktop();
 
@@ -103,6 +101,7 @@ export default function HeroSection() {
           loop
           muted
           playsInline
+          fetchPriority="high"
           poster={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/home-hero-placeholder.webp`}
         />
       </div>

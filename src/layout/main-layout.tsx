@@ -1,7 +1,6 @@
 // MainLayout.tsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 import Foot from "../components/footer/foot";
 
 type MainLayoutProps = {
@@ -38,30 +37,27 @@ export default function MainLayout({
     if (playOncePerSession) {
       try {
         sessionStorage.setItem("introPlayed", "true");
-      } catch { }
+      } catch {}
     }
     setShowIntro(false);
     if (redirectTo) navigate(redirectTo);
   };
-  if (showIntro) {
 
-  }
   return (
     <div className="relative min-h-screen w-full max-sm:overflow-x-hidden">
+      {children}
+      <Foot />
 
       {showIntro ? (
         <div className="fixed w-screen h-screen inset-0 z-[9999] flex items-center justify-center bg-[#40C2CC]">
           <img
             className="w-[20rem] md:w-1/4"
             src="/assets/Logo_Intero.gif"
+            alt=""
             onLoad={() => setTimeout(finishIntro, 3200)}
           />
         </div>
-      ) : <>
-        {children}
-        <Foot />
-      </>}
-
+      ) : null}
     </div>
   );
 }

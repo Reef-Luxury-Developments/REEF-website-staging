@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { CountryCodes } from "./country";
 import { useRecaptchaToken } from "../hooks/useRecaptchaToken";
 import { trackEvent } from "../utils/analytics";
+import RecaptchaProvider from "./RecaptchaProvider";
 
 // Types expected by the API
 interface AddInterestBody {
@@ -24,7 +25,7 @@ async function postAddInterest(body: AddInterestBody) {
   return res.data;
 }
 
-const RegisterSection = ({
+const RegisterSectionInner = ({
   project_name,
   source,
 }: {
@@ -446,6 +447,15 @@ const RegisterSection = ({
   );
 };
 
-export default RegisterSection;
+export default function RegisterSection(props: {
+  project_name?: string;
+  source?: string;
+}) {
+  return (
+    <RecaptchaProvider>
+      <RegisterSectionInner {...props} />
+    </RecaptchaProvider>
+  );
+}
 
 // countryCodes.ts

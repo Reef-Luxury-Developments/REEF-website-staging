@@ -9,6 +9,7 @@ import {
   Polyline,
 } from "react-leaflet";
 import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import HeaderOfSection from "../HeaderOfSection";
 import { useLanguage } from "../../i18n/LanguageProvider";
 

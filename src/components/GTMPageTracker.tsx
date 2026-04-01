@@ -1,48 +1,52 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { trackPageView, trackEvent } from "../utils/analytics";
 
+const MILESTONES = [50, 75, 90] as const;
+
 const GTMPageTracker = () => {
   const location = useLocation();
-  const [milestones, setMilestones] = useState<{ [key: number]: boolean }>({
+  const milestonesRef = useRef<Record<(typeof MILESTONES)[number], boolean>>({
     50: false,
     75: false,
     90: false,
   });
 
-  // 1. Track Page Views
   useEffect(() => {
     trackPageView(location.pathname + location.search);
-
-    // Reset scroll milestones when the page changes
-    setMilestones({ 50: false, 75: false, 90: false });
+    milestonesRef.current = { 50: false, 75: false, 90: false };
   }, [location]);
 
-  // 2. Track Scroll Depth
   useEffect(() => {
+    let rafId = 0;
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = 0;
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
 
-      // Safety check for short pages
-      if (docHeight <= 0) return;
+        if (docHeight <= 0) return;
 
-      const scrollPercent = (scrollTop / docHeight) * 100;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        const m = milestonesRef.current;
 
-      ([50, 75, 90] as const).forEach((milestone) => {
-        if (scrollPercent >= milestone && !milestones[milestone]) {
-          // Fire event to GTM
-          trackEvent("scroll", { percent_scrolled: milestone });
-          // Mark as fired so it doesn't fire again on this page
-          setMilestones((prev) => ({ ...prev, [milestone]: true }));
+        for (const milestone of MILESTONES) {
+          if (scrollPercent >= milestone && !m[milestone]) {
+            trackEvent("scroll", { percent_scrolled: milestone });
+            m[milestone] = true;
+          }
         }
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [milestones]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return null;
 };
