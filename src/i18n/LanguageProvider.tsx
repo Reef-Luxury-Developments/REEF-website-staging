@@ -99,6 +99,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import en from "./locales/en.json";
 import ar from "./locales/ar.json";
+import { localeFromPathname } from "./localePath";
 
 export type SupportedLanguage = "en" | "ar";
 type Translations = Record<string, any>;
@@ -127,18 +128,11 @@ const getNestedValue = (obj: any, path: string): any => {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<SupportedLanguage>(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.location.pathname.startsWith("/ar")
-    )
-      return "ar";
-    const saved =
-      typeof window !== "undefined"
-        ? (localStorage.getItem("lang") as SupportedLanguage | null)
-        : null;
-    return saved === "ar" || saved === "en" ? saved : "en";
-  });
+  const [language, setLanguage] = useState<SupportedLanguage>(() =>
+    typeof window !== "undefined"
+      ? localeFromPathname(window.location.pathname)
+      : "en",
+  );
 
   const dir = language === "ar" ? "rtl" : "ltr";
 

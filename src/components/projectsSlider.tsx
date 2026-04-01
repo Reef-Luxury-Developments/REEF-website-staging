@@ -201,7 +201,7 @@ const ProjectsSlider = () => {
   }
 
   return (
-    <section className="relative w-full pb-6 pt-12 md:pb-12  md:pt-24 bg-white">
+    <section className="relative w-full pb-6 pt-12 md:pb-12  md:pt-24 bg-white overflow-hidden">
       <div className="px-8 w-full md:w-11/12 mx-auto">
         <div className="flex flex-col md:flex-row gap-8 mb-12 md:mb-16">
           <div className="md:w-2/3">

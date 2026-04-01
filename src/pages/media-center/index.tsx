@@ -5,6 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 import RegisterSection from "../../components/registerSection";
 import { CiCalendar } from "react-icons/ci";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,6 +13,8 @@ import { Link, useNavigate } from "react-router-dom";
 export default function MediaCenter() {
   const theme = useTheme();
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
+  const navigateArticle = useNavigate();
   const PAGE_SIZE = 6;
   const {
     data,
@@ -79,7 +82,6 @@ export default function MediaCenter() {
       </div>
     </section>
   );
-  const naviagate = useNavigate();
   const renderArticles = () => (
     <section className="bg-white px-48 pt-8 max-sm:px-4">
       <div className=" mx-auto">
@@ -87,7 +89,7 @@ export default function MediaCenter() {
           {items.map((item, idx) => (
             <div
               onClick={() => {
-                naviagate(`/media-center/${item.id}`);
+                navigateArticle(localizedTo(`/media-center/${item.id}`));
               }}
               key={item.id || idx}
               className="group cursor-pointer"
@@ -201,7 +203,7 @@ export default function MediaCenter() {
               {t("media.Article2")}
             </p> */}
             <Link
-              to={`/media-center/${heroItem?.id}`}
+              to={localizedTo(`/media-center/${heroItem?.id}`)}
               className="inline-flex hover:text-[#40C2CC] transition duration-300 font-sans items-center mt-6 text-base font-medium text-[#0A181ACC]/90"
             >
               {t("media.read")}

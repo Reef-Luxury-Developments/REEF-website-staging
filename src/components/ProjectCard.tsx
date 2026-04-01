@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { PiBed } from "react-icons/pi";
 import { useLanguage } from "../i18n/LanguageProvider";
+import { useLocalizedPath } from "../i18n/localePath";
 import { trackEvent } from "../utils/analytics";
 
 export interface ProjectCardProps {
@@ -18,13 +19,14 @@ export interface ProjectCardProps {
 
 const ProjectCard = ({ project }: { project: ProjectCardProps }) => {
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
   const navigate = useNavigate();
 
   return (
     <div
       className="cursor-pointer group"
       onClick={() => {
-        navigate(`/project-details/${project.id}`);
+        navigate(localizedTo(`/project-details/${project.id}`));
         trackEvent("project_click", {
           project_name: project.name,
           project_id: project.id,

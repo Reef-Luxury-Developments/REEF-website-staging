@@ -8,6 +8,7 @@ import RegisterSection from "../../components/registerSection";
 import LatestSlider from "../../components/loop-slider/LatestSlider";
 import Tab from "../../components/brand/tab";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,6 +62,7 @@ const Index = () => {
   ];
   const [searchQuery, setSearchQuery] = useState("");
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
 
   const getUnitTypeLabel = (value: number) => {
     if (value === 0) return t("projectsPage.filters.apartment");
@@ -382,7 +384,7 @@ const Index = () => {
           </p>
           <div className="flex w-full justify-start">
             <Link
-              to="/conatct-us"
+              to={localizedTo("/conatct-us")}
               className="font-general text-lg text-[#40C2CC] font-medium hover:underline hover:text-[#30AEB8]"
             >
               {t("faqSection.contact")}

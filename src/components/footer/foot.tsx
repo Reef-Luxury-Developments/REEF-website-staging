@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import StatCard from "./card";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { GoArrowUpRight } from "react-icons/go";
@@ -84,20 +85,20 @@ function SocialLink({
 }
 
 const Foot = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
   const [isHovered, setIsHovered] = useState(false);
-  const localePrefix = language === "ar" ? "/ar" : "";
 
   const links = [
-    { title: t("foot.Home"), link: `${localePrefix}/` },
-    { title: t("foot.Project"), link: `${localePrefix}/project-all` },
+    { title: t("foot.Home"), link: localizedTo("/") },
+    { title: t("foot.Project"), link: localizedTo("/project-all") },
 
     // TODO: uncomment when communities are ready
-    // { title: t("foot.Communities"), link: `${localePrefix}/communities` },
-    { title: t("foot.About"), link: `${localePrefix}/aboutus` },
-    // { title: t("foot.News"), link: `${localePrefix}/media-center` },
-    { title: t("foot.Contact"), link: `${localePrefix}/conatct-us` },
-    { title: t("foot.FAQ"), link: `${localePrefix}/faq` },
+    // { title: t("foot.Communities"), link: localizedTo("/communities") },
+    { title: t("foot.About"), link: localizedTo("/aboutus") },
+    // { title: t("foot.News"), link: localizedTo("/media-center") },
+    { title: t("foot.Contact"), link: localizedTo("/conatct-us") },
+    { title: t("foot.FAQ"), link: localizedTo("/faq") },
     {
       title: t("foot.ChannelPartner"),
       link: "https://reefchannelpartners.com/channelpartner.html",
@@ -189,7 +190,7 @@ const Foot = () => {
             src="/assets/Reef_Full_Logo.svg"
             alt="Reef Logo"
             onClick={() => {
-              navigate(language === "ar" ? "/ar" : "/");
+              navigate(localizedTo("/"));
             }}
           />
         </div>
@@ -236,7 +237,7 @@ const Foot = () => {
                     <span
                       className="nav-animate-link font-general text-nowrap text-xl font-medium text-black/80 cursor-pointer"
                       onClick={() => {
-                        navigate(`${localePrefix}/project-details/${item.id}`);
+                        navigate(localizedTo(`/project-details/${item.id}`));
                         trackEvent("project_click", {
                           project_name: item.name || "",
                           project_id: item.id || "",
@@ -328,13 +329,13 @@ const Foot = () => {
           </span>
           <div className="space-x-4 mt-2 md:mt-0">
             <Link
-              to={`${localePrefix}/privacy-policy`}
+              to={localizedTo("/privacy-policy")}
               className="font-general text-sm text-black/40 text-center hover:text-[#00C5CF] hover:underline"
             >
               {t("foot.bottom.privacyPolicy")}
             </Link>
             <Link
-              to={`${localePrefix}/terms-and-conditions`}
+              to={localizedTo("/terms-and-conditions")}
               className="font-general text-sm text-black/40 text-center hover:text-[#00C5CF] hover:underline"
             >
               {t("foot.bottom.terms")}

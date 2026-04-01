@@ -5,6 +5,7 @@ import { GoPlus } from "react-icons/go";
 import { IoIosSearch } from "react-icons/io";
 import RegisterSection from "../../components/registerSection";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { Link } from "react-router-dom";
@@ -13,6 +14,7 @@ import Tab from "../../components/brand/tab";
 export default function FaqComponent() {
   // Initialize translation hook
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
 
   // State to manage which FAQ is open
   const [openIndex, setOpenIndex] = useState(-1);
@@ -84,7 +86,7 @@ export default function FaqComponent() {
         <p className="font-general px-2 text-[#0A181A8F]/55 text-lg">
           {t("faq.Qtitle")}
           <Link
-            to="/conatct-us"
+            to={localizedTo("/conatct-us")}
             className="font-general text-lg text-[#40C2CC] font-medium hover:underline hover:text-[#30AEB8]"
           >
             {t("faqSection.contact")}

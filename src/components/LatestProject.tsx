@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useTheme } from "../theme/ThemeProvider";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../i18n/LanguageProvider";
+import { useLocalizedPath } from "../i18n/localePath";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../axios";
 import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
@@ -20,6 +21,7 @@ const defaultImages = [
 export default function LatestProject() {
   const theme = useTheme();
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
@@ -140,7 +142,7 @@ export default function LatestProject() {
           <div className="w-full"
             onClick={() => {
               const id = sortedProjects?.[0]?.id;
-              if (id) navigate(`/project-details/${id}`);
+              if (id) navigate(localizedTo(`/project-details/${id}`));
             }}
           >
             {/* Project Image */}
@@ -182,7 +184,7 @@ export default function LatestProject() {
           <div className="w-full"
             onClick={() => {
               const id = sortedProjects?.[1]?.id;
-              if (id) navigate(`/project-details/${id}`);
+              if (id) navigate(localizedTo(`/project-details/${id}`));
             }}
           >
             {/* Project Image */}
@@ -224,7 +226,7 @@ export default function LatestProject() {
           <div className="w-full"
             onClick={() => {
               const id = sortedProjects?.[2]?.id;
-              if (id) navigate(`/project-details/${id}`);
+              if (id) navigate(localizedTo(`/project-details/${id}`));
             }}
           >
             {/* Project Image */}
@@ -288,7 +290,7 @@ export default function LatestProject() {
       tabIndex={0}
       onClick={() => {
         const id = sortedProjects?.[currentImageIndex]?.id;
-        if (id) navigate(`/project-details/${id}`);
+        if (id) navigate(localizedTo(`/project-details/${id}`));
       }}
     >
 

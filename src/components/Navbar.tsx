@@ -1,36 +1,27 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 // If you already have these in your project, keep them as-is
 import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
 import { useTheme } from "../theme/ThemeProvider";
 import { useLanguage } from "../i18n/LanguageProvider";
+import { toggleLocalePath, useLocalizedPath } from "../i18n/localePath";
 import FullscreenMenuOverlay from "./menu";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FiGlobe } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import TopBar from "./TopBar";
-import { useQueryClient } from "@tanstack/react-query";
-import axios from "../axios";
 import { trackEvent } from "../utils/analytics";
 
 export default function Navbar({ isWhite }: { isWhite?: boolean }) {
   const theme = useTheme();
-  const { t } = useLanguage();
-  const { language, setLanguage } = useLanguage();
+  const { t, language } = useLanguage();
+  const { to: localizedTo, pathname } = useLocalizedPath();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const isArabic = language === "ar";
-  const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const toggleLanguage = () => {
-    const newLang = isArabic ? "en" : "ar";
-    const { pathname } = location;
-    const newPath =
-      newLang === "ar"
-        ? `/ar${pathname}`
-        : pathname.replace(/^\/ar/, "") || "/";
-    navigate(newPath);
+    navigate(toggleLocalePath(pathname));
   };
   return (
     <header className="relative z-[9998]">
@@ -127,7 +118,7 @@ export default function Navbar({ isWhite }: { isWhite?: boolean }) {
         <div className="flex justify-center items-center cursor-pointer">
           <div
             onClick={() => {
-              navigate(isArabic ? "/ar" : "/");
+              navigate(localizedTo("/"));
             }}
           >
             {isWhite ? (

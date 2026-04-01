@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Routes, Route, Outlet } from "react-router-dom";
+import React, { useLayoutEffect } from "react";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
 import ProjectDetails from "../src/pages/project-details";
 import Home from "../src/pages/home";
 import AboutUs from "../src/pages/aboutus";
@@ -15,21 +15,28 @@ import PrivacyPolicy from "../src/pages/privacy-policy";
 import TermsAndConditions from "../src/pages/terms-conditions";
 import GTMPageTracker from "../src/components/GTMPageTracker";
 import NotFound from "../src/pages/not-found";
-import { useLanguage, SupportedLanguage } from "../src/i18n/LanguageProvider";
+import { useLanguage } from "../src/i18n/LanguageProvider";
+import { localeFromPathname } from "../src/i18n/localePath";
 import axios from "../src/axios";
 import { useQueryClient } from "@tanstack/react-query";
 
-function LocaleLayout({ locale }: { locale: SupportedLanguage }) {
+/** Syncs language, API headers, and queries from the URL before descendants paint. */
+function RouteLocaleGate() {
+  const { pathname } = useLocation();
   const { setLanguage } = useLanguage();
   const queryClient = useQueryClient();
+  const locale = localeFromPathname(pathname);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setLanguage(locale);
     (axios.defaults.headers as any)["accept-language"] = locale;
     localStorage.setItem("lang", locale);
+  }, [locale, setLanguage]);
+
+  useLayoutEffect(() => {
     queryClient.invalidateQueries({ predicate: () => true });
     queryClient.refetchQueries({ type: "active" });
-  }, [locale]);
+  }, [locale, queryClient]);
 
   return <Outlet />;
 }
@@ -40,7 +47,7 @@ const AppRouter = () => {
       <GTMPageTracker />
       <Routes>
         {/* English routes (default, no prefix) */}
-        <Route element={<LocaleLayout locale="en" />}>
+        <Route element={<RouteLocaleGate />}>
           <Route path="/" element={<Home />} />
           <Route path="/project-details/:id" element={<ProjectDetails />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -57,7 +64,7 @@ const AppRouter = () => {
         </Route>
 
         {/* Arabic routes (prefixed with /ar) */}
-        <Route path="/ar" element={<LocaleLayout locale="ar" />}>
+        <Route path="/ar" element={<RouteLocaleGate />}>
           <Route index element={<Home />} />
           <Route path="project-details/:id" element={<ProjectDetails />} />
           <Route path="aboutus" element={<AboutUs />} />
