@@ -1,12 +1,10 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { useTheme } from "../theme/ThemeProvider";
 import { useLanguage } from "../i18n/LanguageProvider";
 
 export default function Container() {
 
   const { t } = useLanguage();
-  const theme = useTheme();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 

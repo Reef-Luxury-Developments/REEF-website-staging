@@ -1,15 +1,13 @@
 import { useTheme } from "../../theme/ThemeProvider";
-import CoverImage from "./cover-imagr";
 import { useLanguage } from "../../i18n/LanguageProvider";
 interface props {
   index: number;
-  data: any
+  data: any;
 }
 const HoverSection = ({ index, data }: props) => {
   const { t } = useLanguage();
   const theme = useTheme();
   const isScrolle = window.screenY > 100;
-
 
   return (
     <>
@@ -19,9 +17,7 @@ const HoverSection = ({ index, data }: props) => {
       >
         {/* LEFT SIDE - HEADING */}
         <div className="uppercase font-bodoni text-[clamp(3rem,5vw,5rem)] text-white leading-[1] text-center md:text-start w-full md:w-3/5">
-          <h1 className="max-sm:!text-4xl">
-            {data?.slogin}
-          </h1>
+          <h1 className="max-sm:!text-4xl">{data?.slogin}</h1>
         </div>
         <div className="flex justify-end">
           <p className="text-lg text-center font-general md:text-start text-white/80 w-full md:w-1/4">

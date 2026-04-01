@@ -14,8 +14,6 @@ import ChannelPartne from "../src/pages/channel-partner";
 import PrivacyPolicy from "../src/pages/privacy-policy";
 import TermsAndConditions from "../src/pages/terms-conditions";
 import GTMPageTracker from "../src/components/GTMPageTracker";
-import Communities from "../src/pages/communities";
-import CommunityDetails from "../src/pages/community-details";
 import NotFound from "../src/pages/not-found";
 
 const AppRouter = () => {

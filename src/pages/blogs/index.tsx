@@ -5,7 +5,6 @@ const Skeleton = ({ className = "" }) => (
 
 // ==================== Blogs.jsx (with Skeletons) ====================
 import React from "react";
-import { useTheme } from "../../theme/ThemeProvider";
 import Navbar from "../../components/Navbar";
 import RegisterSection from "../../components/registerSection";
 import LuxuryHeroSection from "./LuxuryHeroSection";
@@ -16,7 +15,6 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 
 export default function Blogs() {
-  const theme = useTheme();
   const { t } = useLanguage();
   const { id } = useParams();
 

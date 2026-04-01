@@ -1,7 +1,6 @@
 import Axios, {
   AxiosInstance,
   AxiosResponse,
-  InternalAxiosRequestConfig,
 } from "axios";
 import { toast } from "react-toastify";
 import { QueryClient } from "@tanstack/react-query";
@@ -14,8 +13,8 @@ export const setQueryClient = (client: QueryClient) => {
 };
 //TODO: change baseURL before deploying to production
 const axios: AxiosInstance = Axios.create({
-  baseURL: "https://api-website.reefdevelopments.tech/api",
-  // baseURL: "https://api-website.reefdevelopments.ae/api",
+  // baseURL: "https://api-website.reefdevelopments.tech/api",
+  baseURL: "https://api-website.reefdevelopments.ae/api",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",

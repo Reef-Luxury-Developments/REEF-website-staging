@@ -19,7 +19,7 @@ import { useLanguage } from "../../i18n/LanguageProvider";
  * - className: string – optional extra classes (e.g., different height)
  */
 export default function ContactHeroSimple({
-  bgImage = "/assets/contactus.jpg",
+  bgImage = `https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/contactus.jpg`,
   className = "",
 }) {
   const { t } = useLanguage();

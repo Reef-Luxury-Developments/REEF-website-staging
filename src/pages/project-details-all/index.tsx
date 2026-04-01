@@ -1,9 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Navbar from "../../components/Navbar";
 import { IoChevronDown, IoMapOutline, IoSearch } from "react-icons/io5";
-import { PiBed, PiHouseThin } from "react-icons/pi";
 import { LuGrid2X2 } from "react-icons/lu";
-import { CiLocationOn } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
 import { FiMinus } from "react-icons/fi";
 import RegisterSection from "../../components/registerSection";
@@ -13,7 +11,6 @@ import { useLanguage } from "../../i18n/LanguageProvider";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { Link, useNavigate } from "react-router-dom";
-import { MdApartment } from "react-icons/md";
 import { trackEvent } from "../../utils/analytics";
 import ProjectCard from "../../components/ProjectCard";
 import { sortProjectsByName } from "../../utils/projectSorting";
