@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import StatCard from "./card";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
 import { GoArrowUpRight } from "react-icons/go";
@@ -85,18 +86,19 @@ function SocialLink({
 
 const Foot = () => {
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
   const [isHovered, setIsHovered] = useState(false);
 
   const links = [
-    { title: t("foot.Home"), link: "/" },
-    { title: t("foot.Project"), link: "/project-all" },
+    { title: t("foot.Home"), link: localizedTo("/") },
+    { title: t("foot.Project"), link: localizedTo("/project-all") },
 
     // TODO: uncomment when communities are ready
-    // { title: t("foot.Communities"), link: "/communities" },
-    { title: t("foot.About"), link: "/aboutus" },
-    // { title: t("foot.News"), link: "/media-center" },
-    { title: t("foot.Contact"), link: "/conatct-us" },
-    { title: t("foot.FAQ"), link: "/faq" },
+    // { title: t("foot.Communities"), link: localizedTo("/communities") },
+    { title: t("foot.About"), link: localizedTo("/aboutus") },
+    // { title: t("foot.News"), link: localizedTo("/media-center") },
+    { title: t("foot.Contact"), link: localizedTo("/conatct-us") },
+    { title: t("foot.FAQ"), link: localizedTo("/faq") },
     {
       title: t("foot.ChannelPartner"),
       link: "https://reefchannelpartners.com/channelpartner.html",
@@ -188,7 +190,7 @@ const Foot = () => {
             src="/assets/Reef_Full_Logo.svg"
             alt="Reef Logo"
             onClick={() => {
-              navigate("/");
+              navigate(localizedTo("/"));
             }}
           />
         </div>
@@ -235,7 +237,7 @@ const Foot = () => {
                     <span
                       className="nav-animate-link font-general text-nowrap text-xl font-medium text-black/80 cursor-pointer"
                       onClick={() => {
-                        navigate(`/project-details/${item.id}`);
+                        navigate(localizedTo(`/project-details/${item.id}`));
                         trackEvent("project_click", {
                           project_name: item.name || "",
                           project_id: item.id || "",
@@ -327,13 +329,13 @@ const Foot = () => {
           </span>
           <div className="space-x-4 mt-2 md:mt-0">
             <Link
-              to="/privacy-policy"
+              to={localizedTo("/privacy-policy")}
               className="font-general text-sm text-black/40 text-center hover:text-[#00C5CF] hover:underline"
             >
               {t("foot.bottom.privacyPolicy")}
             </Link>
             <Link
-              to="/terms-and-conditions"
+              to={localizedTo("/terms-and-conditions")}
               className="font-general text-sm text-black/40 text-center hover:text-[#00C5CF] hover:underline"
             >
               {t("foot.bottom.terms")}

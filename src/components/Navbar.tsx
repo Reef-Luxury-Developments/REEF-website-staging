@@ -1,36 +1,28 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 // If you already have these in your project, keep them as-is
 import RegisterInterestModalDemo from "../pages/RegisterInterestModalDemo";
 import { useTheme } from "../theme/ThemeProvider";
 import { useLanguage } from "../i18n/LanguageProvider";
+import { toggleLocalePath, useLocalizedPath } from "../i18n/localePath";
 import FullscreenMenuOverlay from "./menu";
 import { useNavigate } from "react-router-dom";
 import { FiGlobe } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import TopBar from "./TopBar";
-import { useQueryClient } from "@tanstack/react-query";
-import axios from "../axios";
 import { trackEvent } from "../utils/analytics";
 
 export default function Navbar({ isWhite }: { isWhite?: boolean }) {
   const theme = useTheme();
-  const { t } = useLanguage();
-  const { language, setLanguage } = useLanguage();
+  const { t, language } = useLanguage();
+  const { to: localizedTo, pathname } = useLocalizedPath();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const isArabic = language === "ar";
-  const queryClient = useQueryClient();
-  const toggleLanguage = () => {
-    const newLang = isArabic ? "en" : "ar";
-    localStorage.setItem("lang", newLang);
-    setLanguage(newLang);
-    (axios.defaults.headers as any)["accept-language"] = newLang;
-
-    // أعد جلب كل الكويريز الفعّالة عشان تجيب نصوص/داتا اللغة الجديدة
-    queryClient.invalidateQueries({ predicate: () => true });
-    queryClient.refetchQueries({ type: "active" });
-  };
   const navigate = useNavigate();
+
+  const toggleLanguage = () => {
+    navigate(toggleLocalePath(pathname));
+  };
   return (
     <header className="relative z-[9998]">
       {/* <TopBar /> */}
@@ -126,7 +118,7 @@ export default function Navbar({ isWhite }: { isWhite?: boolean }) {
         <div className="flex justify-center items-center cursor-pointer">
           <div
             onClick={() => {
-              navigate("/");
+              navigate(localizedTo("/"));
             }}
           >
             {isWhite ? (

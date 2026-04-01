@@ -65,8 +65,8 @@ const RegisterSection = ({
           error?.response?.status === 500
             ? "server_error_500"
             : error?.response?.status
-            ? `http_error_${error.response.status}`
-            : "submission_failed";
+              ? `http_error_${error.response.status}`
+              : "submission_failed";
 
         trackEvent("lead_form_error", {
           project_name: project_name || "",
@@ -187,7 +187,7 @@ const RegisterSection = ({
     if (selectedCountry) {
       if (phoneNumber.trim().length !== selectedCountry.length) {
         setPhoneError(
-          `Phone number must be ${selectedCountry.length} digits for ${selectedCode}`
+          `Phone number must be ${selectedCountry.length} digits for ${selectedCode}`,
         );
         return false;
       }
@@ -274,7 +274,7 @@ const RegisterSection = ({
             });
           }
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
       observer.observe(formRef.current);
       return () => observer.disconnect();
@@ -321,9 +321,9 @@ const RegisterSection = ({
           </p>
         </div>
         {/* Headline */}
-        <h1 className="uppercase font-bodoni text-[clamp(3rem,5vw,5rem)] text-[rgb(10,24,26,1)] leading-[1] text-center md:text-start w-full">
+        <h2 className="uppercase font-bodoni text-[clamp(3rem,5vw,5rem)] text-[rgb(10,24,26,1)] leading-[1] text-center md:text-start w-full">
           {t("register.text2")}
-        </h1>
+        </h2>
       </div>
 
       {/* Right Section */}

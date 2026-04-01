@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLocalizedPath } from "../i18n/localePath";
 
 const HeaderOfSection = ({ title, subTitle, btnTitle, endContent, className, btnLink, endContentClassName }: any) => {
+  const { to: localizedTo } = useLocalizedPath();
+  const resolvedBtnLink = btnLink ? localizedTo(btnLink) : undefined;
+
   return (
 
     <section className="flex flex-col gap-4 items-center w-full px-4 mb-12 mx-auto md:px-0 md:flex-row md:justify-between md:w-5/6">
@@ -32,9 +36,9 @@ const HeaderOfSection = ({ title, subTitle, btnTitle, endContent, className, btn
             {endContent}
           </p>
         )}
-        {btnTitle && (
+        {btnTitle && resolvedBtnLink && (
           <Link
-            to={btnLink}
+            to={resolvedBtnLink}
             className="text-base text-nowrap max-sm:hidden bg-[#40C2CC] rounded-[50px] font-sans text-white px-6 py-3 text-center flex justify-center mt-10"
           >
             {btnTitle}

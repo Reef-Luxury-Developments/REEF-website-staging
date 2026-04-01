@@ -64,7 +64,7 @@ export default function HeroSection() {
       {/* Right: Divider + supporting text */}
       <div className="flex flex-col items-center justify-center gap-4 w-full px-16 md:px-0 md:w-1/4 mx-auto mb-16 z-[4]">
         {/* Supporting text */}
-        <p
+        <h1
           className={`italic font-general text-white text-center text-lg transition-all duration-500 ease-out ${
             showRightText
               ? "opacity-100 translate-y-0"
@@ -72,7 +72,7 @@ export default function HeroSection() {
           }`}
         >
           {t("heroSection.ReefText")}
-        </p>
+        </h1>
 
         {/* Divider */}
         <div className="hidden md:block md:mt-[0.75rem]">
@@ -96,14 +96,14 @@ export default function HeroSection() {
           className="w-full h-full object-cover object-bottom"
           src={
             isDesktop
-              ? `https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/video/Home+Hero+Video.mp4`
-              : `https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/video/Home+Hero+Video+Mobile.mp4`
+              ? `https://${import.meta.env.VITE_BUCKET_CDN_URL}/video/Home+Hero+Video.mp4`
+              : `https://${import.meta.env.VITE_BUCKET_CDN_URL}/video/Home+Hero+Video+Mobile.mp4`
           }
           autoPlay
           loop
           muted
           playsInline
-          poster={`https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/home-hero-placeholder.webp`}
+          poster={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/home-hero-placeholder.webp`}
         />
       </div>
     </section>

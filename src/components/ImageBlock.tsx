@@ -91,7 +91,7 @@ const ImageBlock = () => {
   return (
     <div className="custom-image-block relative w-full h-[361px] overflow-hidden">
       <img
-        src={`https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/reef-feel-luxury.png`}
+        src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/reef-feel-luxury.png`}
         alt="Living Room"
         className="w-full h-full object-cover max-sm:object-left"
       />

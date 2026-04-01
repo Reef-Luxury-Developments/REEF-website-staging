@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import RegisterSection from "../../components/registerSection";
 import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
@@ -9,6 +10,7 @@ import Tab from "../../components/brand/tab";
 
 export default function AboutUs() {
   const { t } = useLanguage();
+  const { to: localizedTo } = useLocalizedPath();
   const navigate = useNavigate();
   const { data: aboutData, isLoading: aboutLoading } = useQuery({
     queryKey: ["about-us", "journal"],
@@ -46,7 +48,7 @@ export default function AboutUs() {
             </div>
           </div>
           <img
-            src={`https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/about_us.png`}
+            src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/about_us.png`}
             alt="About REEF"
           />
         </div>
@@ -70,7 +72,7 @@ export default function AboutUs() {
       {/* Founder Section */}
       <section className="flex flex-col items-center gap-8 px-4 py-12 w-full mx-auto md:w-3/5  md:px-0 md:py-24">
         <img
-          src={`https://${import.meta.env.VITE_BUCKET_NAME}.s3.${import.meta.env.VITE_BUCKET_REGION}.amazonaws.com/image/website/founder_profile_image.jpg`}
+          src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/founder_profile_image.jpg`}
           alt="Samer Al Nasser Ambar"
           className="w-[250px] h-[250px] md:w-[300px] md:h-[400px] object-cover rounded-full"
         />
@@ -99,7 +101,7 @@ export default function AboutUs() {
             <button
               className="bg-[#40C2CC] text-white hover:bg-[#30AEB8] hover:border-[#30AEB8] rounded-full px-4 py-2 font-medium text-md font-general h-fit text-nowrap"
               onClick={() => {
-                navigate("/conatct-us");
+                navigate(localizedTo("/conatct-us"));
               }}
             >
               {t("about.ContactUs")}
@@ -146,7 +148,7 @@ export default function AboutUs() {
             <button
               className="bg-[#40C2CC] text-white hover:bg-[#30AEB8] hover:border-[#30AEB8] rounded-full px-4 py-2 font-medium text-md font-general h-fit text-nowrap"
               onClick={() => {
-                navigate("/conatct-us");
+                navigate(localizedTo("/conatct-us"));
               }}
             >
               {t("about.ContactUs")}

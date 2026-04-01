@@ -1,10 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { useTranslation } from "react-i18next";
 import Navbar from "../../components/Navbar";
 
 const NotFound = () => {
   const navigate = useNavigate();
+  const { to: localizedTo } = useLocalizedPath();
   const { t } = useTranslation();
 
   return (
@@ -29,7 +31,7 @@ const NotFound = () => {
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate(localizedTo("/"))}
                 className="px-8 py-3 bg-[#40C2CC] text-white font-general rounded-full hover:bg-[#35A8B2] transition-colors z-10"
               >
                 {t("common.backToHome", {
