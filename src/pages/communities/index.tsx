@@ -4,6 +4,7 @@ import RegisterSection from "../../components/registerSection";
 import Tab from "../../components/brand/tab";
 import { useLanguage } from "../../i18n/LanguageProvider";
 import { useNavigate } from "react-router-dom";
+import { useLocalizedPath } from "../../i18n/localePath";
 import { trackEvent } from "../../utils/analytics";
 import { useQuery } from "@tanstack/react-query";
 import axios from "../../axios";
@@ -41,6 +42,7 @@ interface CommunityApiItem {
 const Communities = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const { to: localizedTo } = useLocalizedPath();
 
   // Fetch communities from API
   const {
@@ -69,7 +71,7 @@ const Communities = () => {
     trackEvent("community_card_click", {
       community_name: community.name,
     });
-    navigate(`/communities/${community.slug}`);
+    navigate(localizedTo(`/communities/${community.slug}`));
   };
 
   return (

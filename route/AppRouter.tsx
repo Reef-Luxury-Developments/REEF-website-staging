@@ -5,12 +5,15 @@ import { useLanguage } from "../src/i18n/LanguageProvider";
 import { localeFromPathname } from "../src/i18n/localePath";
 import axios from "../src/axios";
 import { useQueryClient } from "@tanstack/react-query";
+import CommunityDetails from "../src/pages/community-details";
 
 const Home = lazy(() => import("../src/pages/home"));
 const ProjectDetails = lazy(() => import("../src/pages/project-details"));
 const AboutUs = lazy(() => import("../src/pages/aboutus"));
 const ConatctUs = lazy(() => import("../src/pages/contact-us"));
-const ProjectDetailsAll = lazy(() => import("../src/pages/project-details-all"));
+const ProjectDetailsAll = lazy(
+  () => import("../src/pages/project-details-all"),
+);
 const MediaCenter = lazy(() => import("../src/pages/media-center"));
 const Faq = lazy(() => import("../src/pages/faq"));
 const Blogs = lazy(() => import("../src/pages/blogs"));
@@ -18,6 +21,7 @@ const ChannelPartne = lazy(() => import("../src/pages/channel-partner"));
 const PrivacyPolicy = lazy(() => import("../src/pages/privacy-policy"));
 const TermsAndConditions = lazy(() => import("../src/pages/terms-conditions"));
 const NotFound = lazy(() => import("../src/pages/not-found"));
+const Communities = lazy(() => import("../src/pages/communities"));
 
 function RouteFallback() {
   return <div className="min-h-[30vh] w-full" aria-hidden />;
@@ -54,6 +58,8 @@ const AppRouter = () => {
             <Route path="/" element={<Home />} />
             <Route path="/project-details/:id" element={<ProjectDetails />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/communities" element={<Communities />} />
+            <Route path="/communities/:slug" element={<CommunityDetails />} />
             <Route path="/conatct-us" element={<ConatctUs />} />
             <Route path="/media-center" element={<MediaCenter />} />
             <Route path="/faq" element={<Faq />} />
@@ -61,13 +67,18 @@ const AppRouter = () => {
             <Route path="/project-all" element={<ProjectDetailsAll />} />
             <Route path="/channel-partner" element={<ChannelPartne />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route
+              path="/terms-and-conditions"
+              element={<TermsAndConditions />}
+            />
           </Route>
 
           <Route path="/ar" element={<RouteLocaleGate />}>
             <Route index element={<Home />} />
             <Route path="project-details/:id" element={<ProjectDetails />} />
             <Route path="aboutus" element={<AboutUs />} />
+            <Route path="communities" element={<Communities />} />
+            <Route path="communities/:slug" element={<CommunityDetails />} />
             <Route path="conatct-us" element={<ConatctUs />} />
             <Route path="media-center" element={<MediaCenter />} />
             <Route path="faq" element={<Faq />} />
@@ -75,7 +86,10 @@ const AppRouter = () => {
             <Route path="project-all" element={<ProjectDetailsAll />} />
             <Route path="channel-partner" element={<ChannelPartne />} />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+            <Route
+              path="terms-and-conditions"
+              element={<TermsAndConditions />}
+            />
           </Route>
 
           <Route path="*" element={<NotFound />} />
