@@ -39,7 +39,10 @@ const ProjectCard = ({ project }: { project: ProjectCardProps }) => {
         <img
           src={project.image}
           alt={project.name}
-          className="w-full object-cover aspect-[4/3]"
+          width={800}
+          height={600}
+          className="aspect-[4/3] w-full object-cover"
+          decoding="async"
         />
         {/* Hover Overlay */}
         <div

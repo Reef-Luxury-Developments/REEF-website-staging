@@ -50,12 +50,19 @@ export default function MainLayout({
 
       {showIntro ? (
         <div className="fixed w-screen h-screen inset-0 z-[9999] flex items-center justify-center bg-[#40C2CC]">
-          <img
-            className="w-[20rem] md:w-1/4"
-            src="/assets/Logo_Intero.gif"
-            alt=""
-            onLoad={() => setTimeout(finishIntro, 3200)}
-          />
+          <div className="flex aspect-square w-[20rem] max-w-[85vw] shrink-0 items-center justify-center min-h-[min(20rem,85vw)] md:min-h-0 md:w-1/4">
+            <img
+              width={512}
+              height={512}
+              className="block h-full w-full max-h-full max-w-full object-contain"
+              src="/assets/Logo_Intero.gif"
+              alt=""
+              decoding="async"
+              fetchPriority="high"
+              loading="eager"
+              onLoad={() => setTimeout(finishIntro, 3200)}
+            />
+          </div>
         </div>
       ) : null}
     </div>

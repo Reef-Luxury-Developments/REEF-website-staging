@@ -54,7 +54,10 @@ const navigate = useNavigate();
                 <img
                   src={item.cover}
                   alt={item.name || `Project ${idx + 1}`}
-                  className="w-full h-full object-cover"
+                  width={800}
+                  height={500}
+                  className="h-full w-full object-cover"
+                  decoding="async"
                 />
               </div>
             ))}

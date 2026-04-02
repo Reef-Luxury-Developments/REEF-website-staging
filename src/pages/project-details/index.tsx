@@ -344,8 +344,8 @@ export default function ProjectDetails() {
             </div>
           </div>
 
-          {/* Image */}
-          <div className="flex relative">
+          {/* Image — aspect box avoids layout jump when CDN image decodes */}
+          <div className="relative flex w-full min-h-[280px] aspect-[3/4] max-sm:aspect-[4/5]">
             {/* VR Button */}
             {data?.linkVr && (
               <>
@@ -396,11 +396,14 @@ export default function ProjectDetails() {
               </>
             )}
             <img
-              className={`h-auto w-full object-contain object-bottom ${
+              width={1200}
+              height={1600}
+              className={`absolute inset-0 h-full w-full object-contain object-bottom ${
                 language === "ar" ? "scale-x-[-1]" : ""
               }`}
               src={data?.imageUrl}
               alt={String(t("ProjectDetails.Reef"))}
+              decoding="async"
             />
           </div>
         </div>

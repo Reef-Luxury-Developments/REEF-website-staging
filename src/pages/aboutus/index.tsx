@@ -50,6 +50,9 @@ export default function AboutUs() {
           <img
             src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/about_us.png`}
             alt="About REEF"
+            width={1200}
+            height={900}
+            className="h-full w-full object-cover"
           />
         </div>
       </section>
@@ -74,7 +77,9 @@ export default function AboutUs() {
         <img
           src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/founder_profile_image.jpg`}
           alt="Samer Al Nasser Ambar"
-          className="w-[250px] h-[250px] md:w-[300px] md:h-[400px] object-cover rounded-full"
+          width={300}
+          height={400}
+          className="h-[250px] w-[250px] md:h-[400px] md:w-[300px] object-cover rounded-full"
         />
 
         <blockquote className="font-bodoni text-[#0A181A] text-[clamp(2.5rem,3vw,3rem)] leading-[1.1] text-center">

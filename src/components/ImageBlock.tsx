@@ -93,7 +93,9 @@ const ImageBlock = () => {
       <img
         src={`https://${import.meta.env.VITE_BUCKET_CDN_URL}/image/website/reef-feel-luxury.png`}
         alt="Living Room"
-        className="w-full h-full object-cover max-sm:object-left"
+        width={1920}
+        height={361}
+        className="h-full w-full object-cover max-sm:object-left"
       />
     </div>
   );

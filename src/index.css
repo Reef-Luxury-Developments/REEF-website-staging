@@ -26,7 +26,8 @@ html {
 
 body {
   overflow-x: hidden;
-  font-family: "Bodoni Moda", serif;
+  /* Georgia / Times reduce font-swap layout shift vs a generic serif fallback */
+  font-family: "Bodoni Moda", Georgia, "Times New Roman", serif;
   scroll-behavior: smooth;
   font-optical-sizing: none !important; 
   font-kerning: auto;

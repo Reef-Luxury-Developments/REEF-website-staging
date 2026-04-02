@@ -121,7 +121,10 @@ export default function Blogs() {
                     <img
                       src={data?.mediaFileUrl}
                       alt={data?.title ?? "Media"}
-                      className="w-full h-[700px] object-cover max-sm:h-[570px] max-sm:object-cover"
+                      width={1400}
+                      height={700}
+                      className="h-[700px] w-full object-cover max-sm:h-[570px] max-sm:object-cover"
+                      decoding="async"
                     />
                   ) : (
                     <Skeleton className="w-full h-[700px] max-sm:h-[570px]" />

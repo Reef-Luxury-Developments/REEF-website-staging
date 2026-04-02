@@ -71,13 +71,18 @@ export default function LuxuryHeroSection({
             <img
               src={data?.ctaImageUrl || imageSrc}
               alt="Luxury interior"
+              width={1200}
+              height={540}
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
+              decoding="async"
             />
             <img
               src="/assets/brand-shape-reflected.svg"
-              alt="Luxury interior"
-              className="absolute w-fit bottom-0 end-0 transform rtl:scale-x-[-1]"
+              alt=""
+              width={40}
+              height={282}
+              className="absolute bottom-0 end-0 h-auto max-h-full w-10 transform rtl:scale-x-[-1]"
               loading="lazy"
             />
           </div>

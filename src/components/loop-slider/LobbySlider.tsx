@@ -21,8 +21,8 @@ const LobbySlider = ({ data, isLoading }: any) => {
 
   if (isLoading) {
     return (
-      <div className="w-full h-screen bg-white flex flex-col animate-pulse">
-        <div className="relative w-full flex-1 overflow-hidden">
+      <div className="flex h-screen min-h-0 w-full flex-col bg-white animate-pulse">
+        <div className="relative min-h-0 w-full flex-1 overflow-hidden">
           <div className="absolute inset-0 flex items-stretch">
             <div className="relative w-3/5 max-sm:w-full h-full overflow-hidden ring-1 ring-gray-200">
               <div className="absolute inset-0 w-full h-full bg-gray-200" />
@@ -41,30 +41,34 @@ const LobbySlider = ({ data, isLoading }: any) => {
 
   return (
 
-    <section className="w-full h-screen flex flex-col">
+    <section className="flex h-screen min-h-0 w-full flex-col">
 
-      {/* Image Slider */}
-      <div className="flex items-stretch ">
-        <div className="w-3/5 max-sm:w-full h-full overflow-hidden">
+      {/* Image Slider — flex-1 reserves viewport space before images decode */}
+      <div className="flex min-h-0 flex-1 items-stretch">
+        <div className="relative h-full min-h-0 w-3/5 max-sm:w-full overflow-hidden">
           <img
             key={images[current]}
             src={images[current]}
             alt={`Main ${current}`}
+            width={1920}
+            height={1080}
             draggable={false}
             decoding="async"
-            className=" inset-0 w-full h-full object-cover object-center transition-transform duration-700 will-change-transform"
+            className="h-full w-full object-cover object-center transition-transform duration-700 will-change-transform"
           />
         </div>
 
-        <div className="w-2/5 max-sm:hidden h-full overflow-hidden opacity-30">
+        <div className="relative hidden h-full min-h-0 w-2/5 overflow-hidden opacity-30 max-sm:hidden">
           <img
             key={images[getIndex(current + 1)]}
             src={images[getIndex(current + 1)]}
-            alt="Side"
+            alt="Side preview"
+            width={1920}
+            height={1080}
             draggable={false}
             loading="lazy"
             decoding="async"
-            className=" inset-0 w-full h-full object-cover object-center scale-[1.05] transition-transform duration-700 will-change-transform"
+            className="h-full w-full scale-[1.05] object-cover object-center transition-transform duration-700 will-change-transform"
           />
 
         </div>

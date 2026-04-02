@@ -123,13 +123,17 @@ export default function Navbar({ isWhite }: { isWhite?: boolean }) {
           >
             {isWhite ? (
               <img
-                className="h-10 md:h-12 object-contain"
+                width={111}
+                height={48}
+                className="h-10 w-auto object-contain md:h-12"
                 src="/assets/Reef_Logo_White.svg"
                 alt="Reef Logo"
               />
             ) : (
               <img
-                className="h-10 md:h-12 object-contain"
+                width={112}
+                height={48}
+                className="h-10 w-auto object-contain md:h-12"
                 src="/assets/Reef_Logo.svg"
                 alt="Reef Logo"
               />

@@ -146,11 +146,14 @@ export default function LatestProject() {
             }}
           >
             {/* Project Image */}
-            <div className="mx-auto w-full h-auto">
+            <div className="relative mx-auto aspect-[4/3] w-full overflow-hidden">
               <img
                 src={images[0]}
                 alt="Project Image"
-                className="w-autos h-auto object-cover"
+                width={1200}
+                height={900}
+                className="h-full w-full object-cover"
+                decoding="async"
               />
             </div>
 
@@ -188,11 +191,14 @@ export default function LatestProject() {
             }}
           >
             {/* Project Image */}
-            <div className="mx-auto w-full h-auto">
+            <div className="relative mx-auto aspect-[4/3] w-full overflow-hidden">
               <img
                 src={images[1]}
                 alt="Project Image"
-                className="w-autos h-auto object-cover"
+                width={1200}
+                height={900}
+                className="h-full w-full object-cover"
+                decoding="async"
               />
             </div>
 
@@ -230,11 +236,14 @@ export default function LatestProject() {
             }}
           >
             {/* Project Image */}
-            <div className="mx-auto w-full h-auto">
+            <div className="relative mx-auto aspect-[4/3] w-full overflow-hidden">
               <img
                 src={images[2]}
                 alt="Project Image"
-                className="w-autos h-auto object-cover"
+                width={1200}
+                height={900}
+                className="h-full w-full object-cover"
+                decoding="async"
               />
             </div>
 
@@ -356,7 +365,4 @@ export default function LatestProject() {
       </div>
     </div>
   );
-}
-function usetranslation(): { t: any } {
-  throw new Error("Function not implemented.");
 }

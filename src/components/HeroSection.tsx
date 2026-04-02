@@ -55,7 +55,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex flex-col justify-between h-[50rem] md:h-screen mb-24"
+      className="relative mb-24 flex h-[50rem] min-h-[50rem] flex-col justify-between overflow-hidden md:h-screen md:min-h-0"
     >
       <Navbar isWhite={true} />
 
@@ -82,16 +82,18 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Background video (slides up + fades in) */}
+      {/* Background video — opacity only (no translate) to reduce CLS */}
       <div
-        className={`absolute h-full inset-0 transition-all duration-500 ease-out will-change-transform will-change-opacity ${
-          showFrame ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        className={`absolute inset-0 h-full min-h-0 w-full transition-opacity duration-500 ease-out ${
+          showFrame ? "opacity-100" : "opacity-0"
         }`}
       >
         <video
           key={isDesktop ? "desktop" : "mobile"}
           ref={videoRef}
-          className="w-full h-full object-cover object-bottom"
+          className="h-full w-full object-cover object-bottom"
+          width={1920}
+          height={1080}
           src={
             isDesktop
               ? `https://${import.meta.env.VITE_BUCKET_CDN_URL}/video/Home+Hero+Video.mp4`
