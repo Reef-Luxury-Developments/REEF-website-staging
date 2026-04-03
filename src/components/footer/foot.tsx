@@ -145,7 +145,10 @@ const Foot = () => {
   ];
 
   return (
-    <section className="w-full px-8 md:w-5/6 md:mx-auto md:px-0">
+    <section
+      id="site-footer"
+      className="w-full px-8 md:w-5/6 md:mx-auto md:px-0"
+    >
       {/* Newslatter Section */}
       <>
         {/* <div className="w-[32.2%] max-sm:w-full flex flex-col gap-8">

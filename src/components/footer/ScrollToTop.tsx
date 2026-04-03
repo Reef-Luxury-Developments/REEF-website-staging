@@ -2,9 +2,20 @@ import { useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function scrollWindowToTop() {
-  // Skip CSS `scroll-behavior: smooth` on body so route changes don't animate
-  // from the footer (races lazy-loaded pages and focus scroll-into-view).
+  // Direct assignment bypasses CSS `scroll-behavior: smooth` on `body`.
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
   window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
+
+/** Focus often remains on the clicked footer `NavLink`; browsers scroll it into view after paint. */
+function blurIfFocusInSiteFooter() {
+  const el = document.activeElement;
+  if (!(el instanceof HTMLElement)) return;
+  const footer = document.getElementById("site-footer");
+  if (footer?.contains(el)) {
+    el.blur();
+  }
 }
 
 export default function ScrollToTop() {
@@ -18,13 +29,30 @@ export default function ScrollToTop() {
   }, []);
 
   useLayoutEffect(() => {
+    blurIfFocusInSiteFooter();
     scrollWindowToTop();
-    // Focus often stays on the clicked footer link; browsers may scroll it into
-    // view on the next frame — run again after paint to keep the top visible.
-    const id = window.requestAnimationFrame(() => {
+  }, [pathname]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const run = () => {
+      if (cancelled) return;
+      blurIfFocusInSiteFooter();
       scrollWindowToTop();
-    });
-    return () => window.cancelAnimationFrame(id);
+    };
+
+    run();
+    const raf = window.requestAnimationFrame(run);
+    const t0 = window.setTimeout(run, 0);
+    // Lazy route chunks often paint after the first frame; focus scroll can run late.
+    const t1 = window.setTimeout(run, 120);
+
+    return () => {
+      cancelled = true;
+      window.cancelAnimationFrame(raf);
+      window.clearTimeout(t0);
+      window.clearTimeout(t1);
+    };
   }, [pathname]);
 
   return null;
