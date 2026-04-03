@@ -93,8 +93,7 @@ const Foot = () => {
     { title: t("foot.Home"), link: localizedTo("/") },
     { title: t("foot.Project"), link: localizedTo("/project-all") },
 
-    // TODO: uncomment when communities are ready
-    // { title: t("foot.Communities"), link: localizedTo("/communities") },
+    { title: t("foot.Communities"), link: localizedTo("/communities") },
     { title: t("foot.About"), link: localizedTo("/aboutus") },
     // { title: t("foot.News"), link: localizedTo("/media-center") },
     { title: t("foot.Contact"), link: localizedTo("/conatct-us") },

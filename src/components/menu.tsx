@@ -11,8 +11,8 @@ const MENU_ITEMS = [
   { labelKey: "menu.home", path: "/" },
   { labelKey: "menu.projects", path: "/project-all" },
   // { labelKey: "menu.media_center", path: "/media-center" },
-  // TODO: uncomment when communities are ready
-  // { labelKey: "menu.communities", path: "/communities" },
+
+  { labelKey: "menu.communities", path: "/communities" },
 
   { labelKey: "menu.ourStory", path: "/aboutus" },
   { labelKey: "menu.contact", path: "/conatct-us" },
