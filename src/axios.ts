@@ -11,8 +11,9 @@ export const setQueryClient = (client: QueryClient) => {
 //TODO: change baseURL before deploying to production
 const axios: AxiosInstance = Axios.create({
   // baseURL: "https://api-website.reefdevelopments.tech/api",
-  baseURL: "https://api-website.reefdevelopments.ae/api",
+  // baseURL: "https://api-website.reefdevelopments.ae/api",
   // baseURL: "http://20.20.1.178/reef-dashboard-backend/public/api",
+  baseURL: "https://portal.reefdevelopments.ae/api",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
